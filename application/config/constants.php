@@ -1,6 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+
+/*
+|--------------------------------------------------------------------------
+| Custom Constants
+*/
+defined('DB_PREFIX') OR define('DB_PREFIX', 'mog_');
+
 /*
 |--------------------------------------------------------------------------
 | Display Debug backtrace

@@ -1,0 +1,5 @@
+[06-Jul-2018 19:16:55 Etc/GMT] PHP Fatal error:  Can't use function return value in write context in /home/afforigx/public_html/application/views/admin/login.php on line 26
+[06-Jul-2018 19:17:00 Etc/GMT] PHP Fatal error:  Can't use function return value in write context in /home/afforigx/public_html/application/views/admin/login.php on line 26
+[06-Jul-2018 19:17:21 Etc/GMT] PHP Fatal error:  Can't use function return value in write context in /home/afforigx/public_html/application/views/admin/login.php on line 26
+[06-Jul-2018 19:18:51 Etc/GMT] PHP Fatal error:  Can't use function return value in write context in /home/afforigx/public_html/application/views/admin/login.php on line 26
+[06-Jul-2018 19:18:52 Etc/GMT] PHP Fatal error:  Can't use function return value in write context in /home/afforigx/public_html/application/views/admin/login.php on line 26
