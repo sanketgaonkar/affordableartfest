@@ -8,10 +8,8 @@
             <?php foreach ($artists as $k => $v){ ?>
             <div class="col-md-4 text-center artist">
                 <a href="<?= base_url('home/artist_gallery/'.$v['id'])?>">
-                    <img src="<?= base_url('assets/images/artist/'.$v['image'])?>" alt="" class="img-circle">
-                    <div class="artist_details text-center">
-                        <p><?=$v['Name']?></p>
-                    </div>
+                    <div><img src="<?= base_url('assets/images/artist/'.$v['image'])?>" alt="" ></div>
+                    <div class="artist_details"><?=$v['Name']?></div>
                 </a>
             </div>
             <?php } ?>

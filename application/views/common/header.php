@@ -12,7 +12,11 @@
 	<link rel="stylesheet" href="<?=base_url('assets/css/header.css')?>"/>
 	<link rel="stylesheet" href="<?=base_url('assets/css/home.css')?>"/>
 	<link rel="stylesheet" href="<?=base_url('assets/css/footer.css')?>"/>
-
+	<link rel="stylesheet" href="<?=base_url('assets/css/team.css')?>"/>
+	<link rel="stylesheet" href="<?=base_url('assets/css/artist_gallery.css')?>"/>
+	<link rel="stylesheet" href="<?=base_url('assets/css/select_artist.css')?>"/>
+	<link rel="stylesheet" href="<?=base_url('assets/css/media.css')?>"/>
+	<link rel="stylesheet" href="<?=base_url('assets/css/partners.css')?>"/>
 </head>
 <body>
     <div class="navbar-wrapper">

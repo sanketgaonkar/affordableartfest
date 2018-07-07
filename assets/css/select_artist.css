@@ -1,0 +1,33 @@
+/* select artist
+---------------------------------------------------*/
+.select_artist .artist_list .artist{
+    margin-bottom: 20px;
+}
+
+.select_artist .artist_list img {
+    height: 200px;
+    width: 200px;
+	padding:5px;
+    border: solid 1px #555;
+
+}
+.select_artist .artist_list .artist_details{
+    font-size: 16pt;
+    margin-top: 10px;
+	text-align:center;
+}
+.select_artist .artist_list .artist:hover img{
+	transition:all ease-in-out 0.3s;
+	border-radius:50%;
+    border-color: rgb(42,175,220);
+}
+
+
+@media (max-width:768px){
+	
+	.select_artist
+	{
+		text-align:center;	
+	}
+	
+}
