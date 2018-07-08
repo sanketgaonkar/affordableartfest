@@ -59,13 +59,15 @@ class Home extends CI_Controller {
     public function media(){
         $data['page_title'] = 'Media';
         $data['page_heading'] = 'Media';
+        $this->load->model('Publication_Media_model');
+        $data['media'] = $this->Publication_Media_model->get_medias();
         $this->load->view('media',$data);
     }
     public function publications(){
         $data['page_title'] = 'Publications';
         $data['page_heading'] = 'Publications';
-        $this->load->model('Publication_model');
-        $data['publications'] = $this->Publication_model->get_publications();
+        $this->load->model('Publication_Media_model');
+        $data['publications'] = $this->Publication_Media_model->get_publications();
         $this->load->view('publications',$data);
     }
     
