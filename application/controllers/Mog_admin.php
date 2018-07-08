@@ -343,6 +343,7 @@ class Mog_admin extends CI_Controller {
     public function Artist(){
         $data['page_title'] = 'Artist';
         $data['page_heading'] = 'Artist List';
+		$data['breadcrums'][] = '<li>'.anchor('Mog_admin/Artist','Artist','class="active"').'</li>';
         $data['add_new'] = anchor('Mog_admin/edit_artist','<i class="fa fa-plus"></i>','class="btn btn-primary" title="Add New"');
         $data['cancel'] = anchor('Mog_admin/Artist', '<button type="button" class="btn btn-default" title="Cancel"><i class="fa fa-reply"></i></button>');
         $this->load->model('admin/Art_model');
@@ -352,6 +353,7 @@ class Mog_admin extends CI_Controller {
     public function Category(){
         $data['page_title'] = 'Category';
         $data['page_heading'] = 'Category List';
+		$data['breadcrums'][] = '<li>'.anchor('Mog_admin/Category','Category','class="active"').'</li>';
         $data['add_new'] = anchor('Mog_admin/edit_category','<i class="fa fa-plus"></i>','class="btn btn-primary" title="Add New"');
         $data['cancel'] = anchor('Mog_admin/Category', '<button type="button" class="btn btn-default" title="Cancel"><i class="fa fa-reply"></i></button>');
         $this->load->model('admin/Art_model');
@@ -361,6 +363,7 @@ class Mog_admin extends CI_Controller {
     public function Arts(){
         $data['page_title'] = 'Arts';
         $data['page_heading'] = 'Arts List';
+		$data['breadcrums'][] = '<li>'.anchor('Mog_admin/Arts','Arts','class="active"').'</li>';
         $data['add_new'] = anchor('Mog_admin/edit_arts','<i class="fa fa-plus"></i>','class="btn btn-primary" title="Add New"');
         $data['cancel'] = anchor('Mog_admin/Arts', '<button type="button" class="btn btn-default" title="Cancel"><i class="fa fa-reply"></i></button>');
         $this->load->model('admin/Art_model');
