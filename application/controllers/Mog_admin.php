@@ -224,6 +224,7 @@ class Mog_admin extends CI_Controller {
         $this->load->model('admin/Publication_Media_model');
         $data['page_title'] = 'Add publication';
         $data['page_heading'] = 'Publication List';
+		$data['breadcrums'][] = '<li>'.anchor('Mog_admin/publications','Publications','class="active"').'</li>';
         $data['add_new'] = anchor('Mog_admin/edit_publication','<i class="fa fa-plus"></i>','class="btn btn-primary" title="Add New"');
         $data['publications'] = $this->Publication_Media_model->get_publications();
         $this->load->view('admin/publications',$data);
@@ -286,6 +287,7 @@ class Mog_admin extends CI_Controller {
         $this->load->model('admin/Publication_Media_model');
         $data['page_title'] = 'Add Media';
         $data['page_heading'] = 'Media List';
+		$data['breadcrums'][] = '<li>'.anchor('Mog_admin/media','Media','class="active"').'</li>';
         $data['add_new'] = anchor('Mog_admin/edit_media','<i class="fa fa-plus"></i>','class="btn btn-primary" title="Add New"');
         $data['media'] = $this->Publication_Media_model->get_medias();
         $this->load->view('admin/media',$data);
@@ -303,11 +305,11 @@ class Mog_admin extends CI_Controller {
         $data['date'] = date('Y/m/d H:i:s');
         $data['cancel'] = anchor('Mog_admin/media','<button type="button" class="btn btn-default" title="Cancel"><i class="fa fa-reply"></i></button>');
         
-        $data['breadcrums'][] = '<li>'.anchor('Mog_admin/publications','Publications').'</li>';
+        $data['breadcrums'][] = '<li>'.anchor('Mog_admin/media','Media').'</li>';
         if($p_id)
-            $data['breadcrums'][] = '<li>'.anchor('Mog_admin/edit_media/'.$p_id,'Publications Edit','class="active"').'</li>';
+            $data['breadcrums'][] = '<li>'.anchor('Mog_admin/edit_media/'.$p_id,'Media Edit','class="active"').'</li>';
         else
-            $data['breadcrums'][] = '<li>'.anchor('Mog_admin/edit_media','Publications Add','class="active"').'</li>';
+            $data['breadcrums'][] = '<li>'.anchor('Mog_admin/edit_media','Media Add','class="active"').'</li>';
             
         //form submit
         if(isset($_POST) && !empty($_POST)){
@@ -373,6 +375,11 @@ class Mog_admin extends CI_Controller {
     public function edit_Artist($a_id = 0){
         $data['page_title'] = 'Artist';
         $data['page_heading'] = 'Artist List';
+		$data['breadcrums'][] = '<li>'.anchor('Mog_admin/Artist','Artist','class="active"').'</li>';
+		if($a_id)
+            $data['breadcrums'][] = '<li>'.anchor('Mog_admin/edit_Artist/'.$a_id,'Artist Edit','class="active"').'</li>';
+        else
+            $data['breadcrums'][] = '<li>'.anchor('Mog_admin/edit_Artist','Artist Add','class="active"').'</li>';
         $data['a_id'] = $a_id;
         $data['add_new'] = anchor('Mog_admin/edit_artist','<i class="fa fa-plus"></i>','class="btn btn-primary" title="Add New"');
         $data['cancel'] = anchor('Mog_admin/Artist', '<button type="button" class="btn btn-default" title="Cancel"><i class="fa fa-reply"></i></button>');
@@ -385,6 +392,11 @@ class Mog_admin extends CI_Controller {
     public function edit_Category($c_id = 0){
         $data['page_title'] = 'Category';
         $data['page_heading'] = 'Category List';
+		$data['breadcrums'][] = '<li>'.anchor('Mog_admin/Category','Category','class="active"').'</li>';
+		if($c_id)
+            $data['breadcrums'][] = '<li>'.anchor('Mog_admin/edit_Artist/'.$c_id,'Artist Edit','class="active"').'</li>';
+        else
+            $data['breadcrums'][] = '<li>'.anchor('Mog_admin/edit_Artist','Artist Add','class="active"').'</li>';
         $data['c_id'] = $c_id;
         $data['add_new'] = anchor('Mog_admin/edit_category','<i class="fa fa-plus"></i>','class="btn btn-primary" title="Add New"');
         $data['cancel'] = anchor('Mog_admin/Category', '<button type="button" class="btn btn-default" title="Cancel"><i class="fa fa-reply"></i></button>');
@@ -397,6 +409,11 @@ class Mog_admin extends CI_Controller {
     public function edit_Arts($a_id = 0){
         $data['page_title'] = 'Arts';
         $data['page_heading'] = 'Arts List';
+		$data['breadcrums'][] = '<li>'.anchor('Mog_admin/Arts','Arts','class="active"').'</li>';
+		if($a_id)
+            $data['breadcrums'][] = '<li>'.anchor('Mog_admin/edit_Artist/'.$a_id,'Artist Edit','class="active"').'</li>';
+        else
+            $data['breadcrums'][] = '<li>'.anchor('Mog_admin/edit_Artist','Artist Add','class="active"').'</li>';
         $data['a_id'] = $a_id;
         $data['add_new'] = anchor('Mog_admin/edit_arts','<i class="fa fa-plus"></i>','class="btn btn-primary" title="Add New"');
         $data['cancel'] = anchor('Mog_admin/Arts', '<button type="button" class="btn btn-default" title="Cancel"><i class="fa fa-reply"></i></button>');

@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <?= form_close() ?>
-                <a href="#">I forgot my password</a><br>
+                <!--a href="#">I forgot my password</a><br-->
             </div>
         </div>
         <script src="<?= base_url('assets/admin/bower_components/jquery/dist/jquery.min.js') ?>"></script>
