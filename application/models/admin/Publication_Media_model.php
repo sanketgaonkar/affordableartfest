@@ -26,7 +26,6 @@ class Publication_Media_model extends CI_Model {
 
     public function add_edit_publication($p_arr) {
         $tmp_date = explode("/", $p_arr['Date']);
-        $config['upload_path'] = 'assets/images/publication/';
         
         $my_data = array(
             "Description"=>$p_arr['Description'],
@@ -34,6 +33,7 @@ class Publication_Media_model extends CI_Model {
             "sort_order"=>$p_arr['sort_order'],
         );
         
+        $config['upload_path'] = 'assets/publications/';
         $config['allowed_types'] = 'pdf';
         $this->load->library('upload', $config);
         $this->upload->initialize($config);
@@ -46,6 +46,7 @@ class Publication_Media_model extends CI_Model {
             }
         }
         
+        $config['upload_path'] = 'assets/images/publication/';
         $config['allowed_types'] = 'jpg|jpeg|png|gif';
         $this->load->library('upload', $config);
         $this->upload->initialize($config);
