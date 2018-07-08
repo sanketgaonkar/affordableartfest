@@ -12,6 +12,8 @@ class Mog_admin extends CI_Controller {
         }else if($this->router->fetch_method()=="login"){
             redirect ('Mog_admin/');
         }
+        
+        $data['method'] = $this->router->fetch_method();
     }
     
     public function index(){
@@ -219,23 +221,24 @@ class Mog_admin extends CI_Controller {
     
     public function publications(){
         
-        $this->load->model('admin/Publication_model');
+        $this->load->model('admin/Publication_Media_model');
         $data['page_title'] = 'Add publication';
         $data['page_heading'] = 'Publication List';
         $data['add_new'] = anchor('Mog_admin/edit_publication','<i class="fa fa-plus"></i>','class="btn btn-primary" title="Add New"');
-        $data['publications'] = $this->Publication_model->get_publications();
+        $data['publications'] = $this->Publication_Media_model->get_publications();
         $this->load->view('admin/publications',$data);
         
     }
     
     public function edit_publication($p_id = 0){
         
-        $this->load->model('admin/Publication_model');
+        $this->load->model('admin/Publication_Media_model');
         $data['page_title'] = 'Add publication';
         $data['page_heading'] = 'Add publication';
         $data['team'] = "";
         $data['errors'] = "";
         $data['p_id'] = 0;
+        $data['date'] = date('Y/m/d H:i:s');
         
         $data['breadcrums'][] = '<li>'.anchor('Mog_admin/publications','Publications').'</li>';
         if($p_id)
@@ -245,7 +248,10 @@ class Mog_admin extends CI_Controller {
             
         //form submit
         if(isset($_POST) && !empty($_POST)){
-            if($this->Publication_model->add_edit_publication($_POST)){
+            $result = $this->Publication_Media_model->add_edit_publication($_POST);
+            if(isset($result['error'])){
+                $data['error_pdf'] = $result['error'];
+            }else if($result){
                 redirect('Mog_admin/publications');
             }else{
                 $data['errors'] = 1;
@@ -258,23 +264,86 @@ class Mog_admin extends CI_Controller {
             $data['p_id'] = $p_id;
             $data['page_title'] = 'Edit publication';
             $data['page_heading'] = 'Edit publication';
-            if(!$data['publication'] = $this->Publication_model->get_publication($p_id)){
+            if(!$data['publication'] = $this->Publication_Media_model->get_publication($p_id)){
                 redirect('Mog_admin/publications');
             }
         }
+        
+        if(isset($data['publication']))
+            $data['date'] = date('Y/m/d H:i:s', strtotime($data['publication']['Date']));
         
         $this->load->view('admin/edit_publication',$data);
     }
     
     public function delete_publication($p_id = 0){
-        $this->load->model('admin/Publication_model');
-        $this->Publication_model->delete_publication($p_id);
+        $this->load->model('admin/Publication_Media_model');
+        $this->Publication_Media_model->delete_publication($p_id);
         redirect('Mog_admin/publications');
+    }
+    
+    public function media(){
+        
+        $this->load->model('admin/Publication_Media_model');
+        $data['page_title'] = 'Add Media';
+        $data['page_heading'] = 'Media List';
+        $data['add_new'] = anchor('Mog_admin/edit_media','<i class="fa fa-plus"></i>','class="btn btn-primary" title="Add New"');
+        $data['media'] = $this->Publication_Media_model->get_medias();
+        $this->load->view('admin/media',$data);
+        
+    }
+    
+    public function edit_media($p_id = 0){
+        
+        $this->load->model('admin/Publication_Media_model');
+        $data['page_title'] = 'Add Media';
+        $data['page_heading'] = 'Add Media';
+        $data['team'] = "";
+        $data['errors'] = "";
+        $data['p_id'] = 0;
+        $data['date'] = date('Y/m/d H:i:s');
+        $data['cancel'] = anchor('Mog_admin/media','<button type="button" class="btn btn-default" title="Cancel"><i class="fa fa-reply"></i></button>');
+        
+        $data['breadcrums'][] = '<li>'.anchor('Mog_admin/publications','Publications').'</li>';
+        if($p_id)
+            $data['breadcrums'][] = '<li>'.anchor('Mog_admin/edit_media/'.$p_id,'Publications Edit','class="active"').'</li>';
+        else
+            $data['breadcrums'][] = '<li>'.anchor('Mog_admin/edit_media','Publications Add','class="active"').'</li>';
+            
+        //form submit
+        if(isset($_POST) && !empty($_POST)){
+            $result = $this->Publication_Media_model->add_edit_media($_POST);
+            if($result){
+                redirect('Mog_admin/media');
+            }else{
+                $data['errors'] = 1;
+            }
+        }
+        
+        if($p_id){       
+            $data['p_id'] = $p_id;
+            $data['page_title'] = 'Edit Media';
+            $data['page_heading'] = 'Edit Media';
+            if(!$data['media'] = $this->Publication_Media_model->get_media($p_id)){
+                redirect('Mog_admin/media');
+            }
+        }
+        
+        if(isset($data['media']))
+            $data['date'] = date('Y/m/d H:i:s', strtotime($data['media']['Date']));
+        
+        $this->load->view('admin/edit_media',$data);
+    }
+    
+    public function delete_media($p_id = 0){
+        $this->load->model('admin/Publication_Media_model');
+        $this->Publication_Media_model->delete_media($p_id);
+        redirect('Mog_admin/media');
     }
     
     public function Artist(){
         $data['page_title'] = 'Artist';
         $data['page_heading'] = 'Artist List';
+		$data['breadcrums'][] = '<li>'.anchor('Mog_admin/Artist','Artist','class="active"').'</li>';
         $data['add_new'] = anchor('Mog_admin/edit_artist','<i class="fa fa-plus"></i>','class="btn btn-primary" title="Add New"');
         $data['cancel'] = anchor('Mog_admin/Artist', '<button type="button" class="btn btn-default" title="Cancel"><i class="fa fa-reply"></i></button>');
         $this->load->model('admin/Art_model');
@@ -284,6 +353,7 @@ class Mog_admin extends CI_Controller {
     public function Category(){
         $data['page_title'] = 'Category';
         $data['page_heading'] = 'Category List';
+		$data['breadcrums'][] = '<li>'.anchor('Mog_admin/Category','Category','class="active"').'</li>';
         $data['add_new'] = anchor('Mog_admin/edit_category','<i class="fa fa-plus"></i>','class="btn btn-primary" title="Add New"');
         $data['cancel'] = anchor('Mog_admin/Category', '<button type="button" class="btn btn-default" title="Cancel"><i class="fa fa-reply"></i></button>');
         $this->load->model('admin/Art_model');
@@ -293,6 +363,7 @@ class Mog_admin extends CI_Controller {
     public function Arts(){
         $data['page_title'] = 'Arts';
         $data['page_heading'] = 'Arts List';
+		$data['breadcrums'][] = '<li>'.anchor('Mog_admin/Arts','Arts','class="active"').'</li>';
         $data['add_new'] = anchor('Mog_admin/edit_arts','<i class="fa fa-plus"></i>','class="btn btn-primary" title="Add New"');
         $data['cancel'] = anchor('Mog_admin/Arts', '<button type="button" class="btn btn-default" title="Cancel"><i class="fa fa-reply"></i></button>');
         $this->load->model('admin/Art_model');
@@ -344,11 +415,13 @@ class Mog_admin extends CI_Controller {
         $data['artist'] = $this->Art_model->delete_artist($a_id);
         redirect('Mog_admin/Artist');
     }
+    
     public function delete_Category($c_id = 0){
         $this->load->model('admin/Art_model');
         $data['category'] = $this->Art_model->delete_category($c_id);
         redirect('Mog_admin/Category');
     }
+    
     public function delete_Arts($a_id = 0){
         $this->load->model('admin/Art_model');
         $data['arts'] = $this->Art_model->delete_art($a_id);
