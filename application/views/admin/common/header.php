@@ -26,8 +26,8 @@
         <!-- Google Font -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     </head>
-
     <body class="hold-transition skin-blue sidebar-mini">
+        <?php $method = $this->router->fetch_method(); ?>
         <div class="wrapper">
             <header class="main-header">
                 <a href="index2.html" class="logo">
@@ -88,23 +88,23 @@
                     <ul class="sidebar-menu" data-widget="tree">
 
                         <li class="active"><?= anchor('Mog_admin/', '<i class="fa fa-dashboard"></i> <span>Dashboard</span>') ?></li>
-                        <li class="treeview">
+                        <li class="treeview <?=(($method=="Category" || $method=="Artist" || $method=="Arts")?"active":"")?>">
                             <a href="#"><i class="fa fa-link"></i> <span>Art</span>
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-left pull-right"></i>
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><?= anchor('Mog_admin/Category', '<i class="fa fa-pencil"></i> <span>Category</span>') ?></li>
-                                <li><?= anchor('Mog_admin/Artist', '<i class="fa fa-pencil"></i> <span>Artist</span>') ?></li>
-                                <li><?= anchor('Mog_admin/Arts', '<i class="fa fa-pencil"></i> <span>Arts</span>') ?></li>
+                                <li class="<?=(($method=="Category")?"active":"")?>"><?= anchor('Mog_admin/Category', '<i class="fa fa-pencil"></i> <span>Category</span>') ?></li>
+                                <li class="<?=(($method=="Artist")?"active":"")?>"><?= anchor('Mog_admin/Artist', '<i class="fa fa-pencil"></i> <span>Artist</span>') ?></li>
+                                <li class="<?=(($method=="Arts")?"active":"")?>"><?= anchor('Mog_admin/Arts', '<i class="fa fa-pencil"></i> <span>Arts</span>') ?></li>
                             </ul>
                         </li>
-                        <li><?= anchor('Mog_admin/team', '<i class="fa fa-user"></i> <span>Team</span>') ?></li>
-                        <li><?= anchor('Mog_admin/gaaf', '<i class="fa fa-user"></i> <span>GAAF 2017</span>') ?></li>
-                        <li><?= anchor('Mog_admin/partners_sponsors', '<i class="fa fa-user"></i> <span>Partners & Sponsors</span>') ?></li>
-                        <li><?= anchor('Mog_admin/publications', '<i class="fa fa-user"></i> <span>Publication</span>') ?></li>
-                        <li><?= anchor('Mog_admin/media', '<i class="fa fa-user"></i> <span>Media</span>') ?></li>
+                        <li class="<?=(($method=="team")?"active":"")?>"><?= anchor('Mog_admin/team', '<i class="fa fa-user"></i> <span>Team</span>') ?></li>
+                        <li class="<?=(($method=="gaaf")?"active":"")?>"><?= anchor('Mog_admin/gaaf', '<i class="fa fa-user"></i> <span>GAAF 2017</span>') ?></li>
+                        <li class="<?=(($method=="partners_sponsors")?"active":"")?>"><?= anchor('Mog_admin/partners_sponsors', '<i class="fa fa-user"></i> <span>Partners & Sponsors</span>') ?></li>
+                        <li class="<?=(($method=="publications")?"active":"")?>"><?= anchor('Mog_admin/publications', '<i class="fa fa-user"></i> <span>Publication</span>') ?></li>
+                        <li class="<?=(($method=="media")?"active":"")?>"><?= anchor('Mog_admin/media', '<i class="fa fa-user"></i> <span>Media</span>') ?></li>
 
                     </ul>
                     <!-- /.sidebar-menu -->
