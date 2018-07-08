@@ -2,7 +2,7 @@
 <section class="content container-fluid">
     <div class="col-md-12 text-right btn-common-action"><?=$add_new?></div>
     <div class="col-md-12 table_top_div">
-        <h4 class="card-title"><i class="fa fa-list"></i>GAAF List</h4>
+        <h4 class="card-title"><i class="fa fa-list"></i><?=$page_heading?></h4>
     </div>
     <table class="table table-bordered">
         <thead>
