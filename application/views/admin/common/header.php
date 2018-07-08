@@ -53,7 +53,7 @@
                                 <ul class="dropdown-menu">
                                     <!-- The user image in the menu -->
                                     <!-- Menu Body -->
-                                    <li class="user-body">
+                                    <li class="user-body hide">
                                         <div class="row">
                                             <div class="col-xs-4 text-center">
                                                 <a href="#">Followers</a>
@@ -69,7 +69,7 @@
                                     </li>
                                     <!-- Menu Footer-->
                                     <li class="user-footer">
-                                        <div class="pull-left">
+                                        <div class="pull-left hide">
                                             <a href="#" class="btn btn-default btn-flat">Profile</a>
                                         </div>
                                         <div class="pull-right">

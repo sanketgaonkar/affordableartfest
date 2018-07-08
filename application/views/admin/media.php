@@ -2,7 +2,7 @@
 <section class="content container-fluid">
     <div class="col-md-12 text-right btn-common-action"><?=$add_new?></div>
     <div class="col-md-12 table_top_div">
-        <h4 class="card-title"><i class="fa fa-list"></i><?=$page_heading?></h4>
+        <h4 class="card-title"><i class="fa fa-newspaper-o"></i><?=$page_heading?></h4>
     </div>
     <table class="table table-bordered">
         <thead>
@@ -11,7 +11,7 @@
                 <th>Description</th>
                 <th>Link</th>
                 <th>Sort Order</th>
-                <th class="text-center" style="width: 130px">Action</th>
+                <th class="text-center" style="width: 130px"><i class="fa fa-cog"></i></th>
             </tr>
         </thead>
         <?php $i = 1;
