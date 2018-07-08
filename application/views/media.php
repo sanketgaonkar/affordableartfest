@@ -12,7 +12,7 @@
                             <div class="col-sm-12 col-xs-12 inner_block">
                                 <div class="col-sm-12 col-xs-12 image_block">
                                     <div class="overlay"></div>
-                                    <img src="<?= base_url('assets/images/publication/' . $v['image']) ?>" width="100%"/>
+                                    <img src="<?= base_url('assets/images/media/' . $v['image']) ?>" width="100%"/>
                                     <div class="date"><?= date('M ', strtotime($v['Date'])) ?><?= date('d, Y', strtotime($v['Date'])) ?></div>
                                 </div>
                                 <div class="col-sm-12 col-xs-12 title_block"><?= $v['Description'] ?></div>
