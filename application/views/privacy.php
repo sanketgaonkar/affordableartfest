@@ -1,7 +1,8 @@
 <?php include 'common/header.php' ?>
-<div class="container">
+<div class="col-sm-12 col-xs-12 min_height_container">
+<div class="container margin_top_container">
     <div class="col-md-12 privacy">
-        <div class="h1">
+        <div class="h2">
             <div class="head_underline">Privacy</div>
         </div>
         <strong>SECTION 1 - WHAT DO WE DO WITH YOUR INFORMATION?</strong><br>
@@ -52,6 +53,7 @@
         <br><strong>QUESTIONS AND CONTACT INFORMATION</strong><br>
         If you would like to: access, correct, amend or delete any personal information we have about you, register a complaint, or simply want more information contact us at mail@museumofgoa.com or by mail at Plot no. 79, Pilerne Industrial Estate, Pilerne, North Goa, Goa: 403 511
     </div>
+</div>
 </div>
 <?php include 'common/footer.php' ?>
  

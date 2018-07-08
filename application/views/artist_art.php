@@ -1,5 +1,6 @@
 <?php include 'common/header.php' ?>
-<div class="container">
+<div class="col-sm-12 col-xs-12 min_height_container">
+<div class="container margin_top_container">
     <div class="col-md-12 artist_art">
         <div class="row hide">
             <h2 class="name"><?= $artist_info['Name'] ?></h2>
@@ -28,6 +29,7 @@
 
         </div>
     </div>
+</div>
 </div>
 <?php include 'common/footer.php' ?>
  

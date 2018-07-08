@@ -1,7 +1,8 @@
 <?php include 'common/header.php' ?>
-<div class="container">
+<div class="col-sm-12 col-xs-12 min_height_container">
+<div class="container margin_top_container">
     <div class="col-md-12 refund">
-        <div class="h1">
+        <div class="h2">
             <div class="head_underline">Refund</div>
         </div>
         <strong>Returns</strong><br>
@@ -28,6 +29,7 @@
         <br><br>
         Depending on where you live, the time it may take for your exchanged product to reach you, may vary.
     </div>
+</div>
 </div>
 <?php include 'common/footer.php' ?>
  

@@ -103,7 +103,15 @@ class Home extends CI_Controller {
         $data['page_heading'] = 'Volunteers';
         $this->load->view('volunteer',$data);
     }
-    
+	
+    public function vote(){
+        $data['page_title'] = 'Vote';
+		$data['page_heading'] = 'Vote';
+		$this->load->model('Voting_model');
+        $data['arts'] = $this->Voting_model->get_arts();
+        $this->load->view('vote',$data);
+    }
+	
     public function about_us(){
         $data['page_title'] = 'About Us';
         $this->load->view('about_us',$data);
