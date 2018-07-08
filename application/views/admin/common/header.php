@@ -104,6 +104,7 @@
                         <li><?= anchor('Mog_admin/gaaf', '<i class="fa fa-user"></i> <span>GAAF 2017</span>') ?></li>
                         <li><?= anchor('Mog_admin/partners_sponsors', '<i class="fa fa-user"></i> <span>Partners & Sponsors</span>') ?></li>
                         <li><?= anchor('Mog_admin/publications', '<i class="fa fa-user"></i> <span>Publication</span>') ?></li>
+                        <li><?= anchor('Mog_admin/media', '<i class="fa fa-user"></i> <span>Media</span>') ?></li>
 
                     </ul>
                     <!-- /.sidebar-menu -->
