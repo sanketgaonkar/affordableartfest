@@ -102,7 +102,7 @@ box-shadow: 0px 0px 25px -5px rgba(33,33,33,1);
 {
 	position:absolute;
 	height:100%;
-	width:100%;
+	width:90%;
 	background:rgba(255,255,255,0.4);
 	z-index:111;
 }
@@ -123,10 +123,14 @@ box-shadow: 0px 0px 25px -5px rgba(33,33,33,1);
 	margin-top:10px;
 	color:rgb(33,33,33);
 }
-.download_icon
+.media_blocks .media_block .download_icon, .media_blocks .media_block .download_icon_xs
 {
+	display:none;
 	position:absolute;
-	left:50%;
+	left:42%;
+	top:42%;
+	font-size:38px;
+	color:#fff;
 }
 .inner_block:hover .overlay
 {
@@ -136,6 +140,7 @@ box-shadow: 0px 0px 25px -5px rgba(33,33,33,1);
 .inner_block:hover .download_icon
 {
 	display:inline-block;
+	transition:all ease-in-out 0.3s;
 }
 /* partners
 ---------------------------------------------------*/
@@ -343,10 +348,18 @@ box-shadow: 0px 0px 25px -5px rgba(33,33,33,1);
 	{
 		border-left: none;
 	}
-	/* artist gallery*/
+	/* publications */
 	.media_publications
 	{
 		text-align:center;	
+	}
+	.media_blocks .media_block .download_icon_xs
+	{
+		display:inline-block;
+	}
+	.media_blocks .media_block .overlay
+	{
+		background:transparent;
 	}
 	/*partners*/
 	.partners
@@ -406,7 +419,7 @@ box-shadow: 0px 0px 25px -5px rgba(33,33,33,1);
 		width:35%;
 		height:100px;
 	}
-	/* partners */
+	/* vote */
 	.vote .vote_list_block .image_block img
 	{
 		height:100px;
