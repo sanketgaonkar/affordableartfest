@@ -1,7 +1,8 @@
 <?php include 'common/header.php' ?>
-<div class="container">
+<div class="col-sm-12 col-xs-12 min_height_container">
+<div class="container margin_top_container">
     <div class="col-md-12 terms_and_conditions">
-        <div class="h1">
+        <div class="h2">
             <div class="head_underline">Terms and Conditions</div>
         </div>
         <strong>OVERVIEW</strong><br>
@@ -105,6 +106,7 @@
         <br><strong>SECTION 20 - CONTACT INFORMATION</strong><br>
         Questions about the Terms of Service should be sent to us at mail@museumofgoa.com
     </div>
+</div>
 </div>
 <?php include 'common/footer.php' ?>
  

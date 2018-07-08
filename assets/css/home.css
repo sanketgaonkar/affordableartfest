@@ -1,3 +1,13 @@
+.min_height_container
+{
+	min-height:800px;
+	padding:0;
+	background:rgb(245,245,245);
+}
+.margin_top_container
+{
+	margin-top:50px;
+}
 /* Carousel base class */
 .carousel {
     height: auto;
@@ -53,6 +63,221 @@
     max-height: 400px;
     overflow: auto;
 }
+/* artist_gallery
+---------------------------------------------------*/
+.artist_gallery .image_container img{
+    height: 320px;
+    max-width: 100%;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+	padding:10px;
+	-webkit-box-shadow: 0px 0px 25px -5px rgba(66,134,244,1);
+-moz-box-shadow: 0px 0px 25px -5px rgba(66,134,244,1);
+box-shadow: 0px 0px 25px -5px rgba(33,33,33,1);
+}
+
+.artist_gallery .image_container img:hover{
+    -moz-transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -o-transform: scale(1.02);
+}
+
+.artist_gallery .image_container .name{
+    margin-top: 10px;
+    font-size: 16pt;
+}
+/* media_publications
+---------------------------------------------------*/
+.media_blocks .media_block
+{
+	margin-top:30px;
+}
+.media_blocks .media_block .image_block
+{
+	position:relative;
+}
+.media_blocks .media_block .overlay
+{
+	position:absolute;
+	height:100%;
+	width:100%;
+	background:rgba(255,255,255,0.4);
+	z-index:111;
+}
+.media_blocks .media_block .image_block .date
+{
+	position:absolute;
+	left:0;
+	top:0;
+	background:rgb(42,175,220);
+	z-index:222;
+	padding:3px 8px;
+	color:#fff;
+	font-size:11px;
+	letter-spacing:1.2px;
+}
+.media_blocks .media_block .title_block
+{
+	margin-top:10px;
+	color:rgb(33,33,33);
+}
+.inner_block:hover .overlay
+{
+	background:transparent;
+	transition:all ease-in-out 0.2s;
+}
+/* partners
+---------------------------------------------------*/
+.partners .top_block
+{
+	margin-top:50px;
+}
+.partners .top_block .big_image
+{
+	width:25%;
+	height:300px;
+}
+.partners .btm_block
+{
+	margin-top:80px;
+}
+.partners .btm_block .medium_image
+{
+	width:70%;
+	height:250px
+}
+.partners .btm_block .small_image
+{
+	width:80%;
+	height:120px;
+}
+.partners img
+{
+	-webkit-box-shadow: 0px 0px 25px -5px rgba(66,134,244,1);
+	-moz-box-shadow: 0px 0px 25px -5px rgba(66,134,244,1);
+	box-shadow: 0px 0px 25px -5px rgba(33,33,33,1);
+	padding:5px;
+}
+.sponsor_title
+{
+	text-transform:uppercase;
+	color:rgb(0,0,0);
+	letter-spacing:1px;
+	margin-bottom:20px;
+}
+.partners .text-with-line:before {
+    margin-left: -50%;
+    text-align: right;
+}
+.partners .desc{
+    margin-top: 20px;
+    text-align: center;
+	font-size:15px;
+	letter-spacing:0.8px;
+}
+.partners .tag{margin-top:0px;}
+.partners .title{margin:0;margin-top: 10px;}
+.partners .text-with-line {
+    position: relative;
+    font-size: 30px;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+	margin-bottom:20px;
+	color:rgb(42,175,220);
+}
+.partners .text-with-line:before, .partners .text-with-line:after {
+    position: absolute;
+    top: 51%;
+    overflow: hidden;
+    width: 47%;
+    height: 1px;
+    content: '\a0';
+    background:rgb(45,255,244);
+}
+/* select artist
+---------------------------------------------------*/
+.select_artist .artist_list .artist{
+    margin-bottom: 20px;
+}
+
+.select_artist .artist_list img {
+    height: 200px;
+    width: 200px;
+	padding:5px;
+    border: solid 1px #555;
+	border-radius:3px;
+}
+.select_artist .artist_list .artist_details{
+    font-size: 16pt;
+    margin-top: 10px;
+	text-align:center;
+}
+.select_artist .artist_list .artist:hover img{
+	transition:all ease-in-out 0.3s;
+	border-radius:50%;
+    border-color: rgb(42,175,220);
+}
+/* team
+---------------------------------------------------*/
+
+.team .team_container{
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgb(230,230,230);
+}
+
+.team .team_container:last-child{
+    border-bottom: none;
+}
+
+.team .team_container p{
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.team .team_container .desc p{
+    margin-bottom: 5px;
+}
+
+.team .team_container .name{
+    font-size: 16pt;
+    font-weight: 500;
+    margin-bottom: 0px;
+    color: rgb(42,175,220);
+}
+.team .team_container .desig{
+    font-size: 12pt;
+    font-weight: 500;
+	color:#000;
+}
+.team .team_container .desc{
+    font-size: 11pt;
+	color:rgb(33,33,33);
+}
+/* vote
+---------------------------------------------------*/
+.vote .vote_list_block
+{
+	margin-top:40px;
+	padding-bottom:40px;
+	border-bottom:1px solid rgb(230,230,230);
+}
+.vote .vote_list_block:last-child
+{
+	border-bottom:none;
+}
+.vote .vote_list_block .image_block img
+{
+	height:200px;
+	max-width:100%;
+}
+.vote .vote_list_block .descript_block
+{
+	word-break:break-all;
+}
 
 
 @media (max-width:2560px){
@@ -82,7 +307,7 @@
 @media (max-width:768px){
 	
 	.carousel .item {
-		height: 400px;
+		height: 300px;
 	}
 	.feeds_container
 	{
@@ -92,17 +317,100 @@
 	{
 		margin-bottom:20px;
 	}
-	
+	/* artist gallery*/
+	.artist_gallery
+	{
+		text-align:center;
+	}
+	.artist_gallery .image_container
+	{
+		margin-bottom:50px;
+	}
+	.artist_gallery .image_container:last-child
+	{
+		margin-bottom:0px;
+	}
+	.artist_gallery .head_underline:before
+	{
+		border-left: none;
+	}
+	/* artist gallery*/
+	.media_publications
+	{
+		text-align:center;	
+	}
+	/*partners*/
+	.partners
+	{
+		text-align:center;
+	}
+	.partners .top_block .big_image
+	{
+		width:40%;
+		height:250px;
+	}
+	.partners .btm_block .medium_image
+	{
+		width:40%;
+		height:250px
+	}
+	.partners .btm_block .small_image
+	{
+		width:25%;
+		height:150px;
+	}
+	/*artist*/
+	.select_artist
+	{
+		text-align:center;	
+	}
+	/*team*/
+	.team
+	{
+		text-align:center;
+	}
 }
 
 @media (max-width:475px){
 	
 	.carousel .item {
-		height: 300px;
+		height: 200px;
 	}
 	.feeds .feed_container .feeds_item
 	{
 		min-height: 300px;
 		max-height: 300px;
 	}
+	/* partners */
+	.partners .top_block .big_image
+	{
+		width:80%;
+		height:220px;
+	}
+	.partners .btm_block .medium_image
+	{
+		width:60%;
+		height:180px
+	}
+	.partners .btm_block .small_image
+	{
+		width:35%;
+		height:100px;
+	}
+	/* partners */
+	.vote .vote_list_block .image_block img
+	{
+		height:100px;
+		max-width:100%;
+	}
+}
+
+@media (max-width:320px){
+	
+	.vote .vote_list_block .image_block img
+	{
+		height:80px;
+		max-width:100%;
+	}
+	
 }

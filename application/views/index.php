@@ -1,4 +1,5 @@
 <?php include 'common/header.php' ?>
+<div class="col-sm-12 col-xs-12 min_height_container">
 <div class="index">
     <div id="Index_Carousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -23,7 +24,7 @@
     </div>
 </div>
 <div class="feeds_container">
-    <div class="container feeds">
+    <div class="container-fluid feeds">
         <div class="col-md-4 col-sm-12 col-xs-12">
             <div class="feed_container col-sm-12 col-xs-12">
                 <p class="hdng"><i class="fa fa-facebook"></i> Feeds</p>
@@ -49,5 +50,6 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 <?php include 'common/footer.php' ?>			

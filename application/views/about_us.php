@@ -1,8 +1,9 @@
 <?php include 'common/header.php' ?>
-<div class="container">
+<div class="col-sm-12 col-xs-12 min_height_container">
+<div class="container margin_top_container">
     <div class="col-md-12 about_us">
         <img src="<?= base_url("assets/images/aboutus.jpg") ?>" width="100%"/>
-        <div class="h1">
+        <div class="h2">
             <div class="head_underline">About MOG</div>
         </div>
         Art is the universal language of mankind and has the power to connect people from all over the world.
@@ -19,6 +20,7 @@
         <br><br>
         The museum, located centrally in Pilerne Industrial Estate, is a three storey structure designed by the well-known architect Dean D’Cruz. Standing between industry on one side and forestland on the other, the Museum of Goa is home to both permanent and temporary exhibition space, an auditorium, store and café, as well as a sculpture garden and artists studios.
     </div>
+</div>
 </div>
 <?php include 'common/footer.php' ?>
  
