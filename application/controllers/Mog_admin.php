@@ -344,11 +344,13 @@ class Mog_admin extends CI_Controller {
         $data['artist'] = $this->Art_model->delete_artist($a_id);
         redirect('Mog_admin/Artist');
     }
+    
     public function delete_Category($c_id = 0){
         $this->load->model('admin/Art_model');
         $data['category'] = $this->Art_model->delete_category($c_id);
         redirect('Mog_admin/Category');
     }
+    
     public function delete_Arts($a_id = 0){
         $this->load->model('admin/Art_model');
         $data['arts'] = $this->Art_model->delete_art($a_id);
