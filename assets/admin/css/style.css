@@ -15,8 +15,7 @@ and open the template in the editor.
     border-radius: 3px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    padding: 0px 5px 5px 5px;
-    margin-bottom: -10px;
+    padding:10px;
 }
 .table_top_div i{margin-right: 10px;}
 
@@ -25,7 +24,8 @@ and open the template in the editor.
 .btn-common-action{margin-bottom: 20px;}
 
 .partner_sponsors .hdng{
-    background: gray;
-    font-size: 18px;
-    color: white;
+	background: #f4f4f4;
+    font-size: 14px;
+	text-transform:uppercase;
+    color: #333;
 }

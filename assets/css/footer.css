@@ -28,7 +28,7 @@
 }
 #footer .footer_topic_content
 {
-	word-break:break-all;
+	word-break:break-word;
 }
 #footer .footer_topic_content .social_link a
 {
