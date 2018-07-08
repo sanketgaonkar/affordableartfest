@@ -88,16 +88,16 @@
                     <ul class="sidebar-menu" data-widget="tree">
 
                         <li class="<?=(($method=="index")?"active":"")?>"><?= anchor('Mog_admin/', '<i class="fa fa-dashboard"></i> <span>Dashboard</span>') ?></li>
-                        <li class="treeview <?=(($method=="Category" || $method=="Artist" || $method=="Arts")?"active":"")?>">
+                        <li class="treeview <?=(($method=="Category" || $method=="Artist" || $method=="Arts" || $method=="edit_artist" || $method=="edit_category" || $method=="edit_arts")?"active":"")?>">
                             <a href="#"><i class="fa fa-link"></i> <span>Art</span>
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-left pull-right"></i>
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li class="<?=(($method=="Category")?"active":"")?>"><?= anchor('Mog_admin/Category', '<i class="fa fa-pencil"></i> <span>Category</span>') ?></li>
-                                <li class="<?=(($method=="Artist")?"active":"")?>"><?= anchor('Mog_admin/Artist', '<i class="fa fa-pencil"></i> <span>Artist</span>') ?></li>
-                                <li class="<?=(($method=="Arts")?"active":"")?>"><?= anchor('Mog_admin/Arts', '<i class="fa fa-pencil"></i> <span>Arts</span>') ?></li>
+                                <li class="<?=(($method=="Category"|| $method=="edit_category")?"active":"")?>"><?= anchor('Mog_admin/Category', '<i class="fa fa-pencil"></i> <span>Category</span>') ?></li>
+                                <li class="<?=(($method=="Artist"|| $method=="edit_artist")?"active":"")?>"><?= anchor('Mog_admin/Artist', '<i class="fa fa-pencil"></i> <span>Artist</span>') ?></li>
+                                <li class="<?=(($method=="Arts"|| $method=="edit_arts")?"active":"")?>"><?= anchor('Mog_admin/Arts', '<i class="fa fa-pencil"></i> <span>Arts</span>') ?></li>
                             </ul>
                         </li>
                         <li class="<?=(($method=="team")?"active":"")?>"><?= anchor('Mog_admin/team', '<i class="fa fa-user"></i> <span>Team</span>') ?></li>
