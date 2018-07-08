@@ -87,7 +87,7 @@
                     <!-- Sidebar Menu -->
                     <ul class="sidebar-menu" data-widget="tree">
 
-                        <li class="active"><?= anchor('Mog_admin/', '<i class="fa fa-dashboard"></i> <span>Dashboard</span>') ?></li>
+                        <li class="<?=(($method=="index")?"active":"")?>"><?= anchor('Mog_admin/', '<i class="fa fa-dashboard"></i> <span>Dashboard</span>') ?></li>
                         <li class="treeview <?=(($method=="Category" || $method=="Artist" || $method=="Arts")?"active":"")?>">
                             <a href="#"><i class="fa fa-link"></i> <span>Art</span>
                                 <span class="pull-right-container">
