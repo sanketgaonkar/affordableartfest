@@ -6,6 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="keywords" content="museum of goa, MOG, Museum of Goa, museum, goa, contemporary arts, modern arts, modern art, contemporary art, contemporary, Goa tourism, places to visit in Goa, " />
         <meta name="description" content="museum of goa" />
+        
+        <link rel="shortcut icon" href="<?= base_url('assets/images/favicon.ico')?>" type="image/x-icon">
+        <link rel="icon" href="<?= base_url('assets/images/favicon.ico')?>" type="image/x-icon">
 
         <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>"/>
         <link rel="stylesheet" href="<?= base_url('assets/css/font-awesome.min.css') ?>"/>
