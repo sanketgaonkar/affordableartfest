@@ -12,6 +12,7 @@
                     <div class="col-sm-12 col-xs-12 inner_block">
 						<div class="col-sm-12 col-xs-12 image_block">
 							<div class="overlay"></div>
+							<i class="download_icon fa fa-download"></i>
 							<img src="<?= base_url('assets/images/publication/'.$v['image']) ?>" width="100%"/>
 							<div class="date"><?=date('M ', strtotime($v['Date']))?><?=date('d, Y', strtotime($v['Date']))?></div>
 						</div>
