@@ -114,6 +114,60 @@ class Art_model extends CI_Model {
         
     }
     
+    public function add_edit_category($art_arr) {
+
+        $my_data = array(
+            "Name"=>$art_arr['Name'],
+            "sort_order"=>$art_arr['sort_order'],
+        );
+        
+        if(!empty($art_arr['c_id'])){
+            $this->db->where('id', $art_arr['c_id']);
+            $this->db->update(DB_PREFIX.'category', $my_data); 
+            return TRUE;
+        }else{  
+            $this->db->insert(DB_PREFIX.'category', $my_data);
+            if($this->db->affected_rows() > 0) {
+                return TRUE;
+            }
+        }
+        
+        return FALSE;
+        
+    }
+    
+    public function add_edit_artist($art_arr) {
+
+        $my_data = array(
+            "Name"=>$art_arr['Name'],
+            "Description"=>$art_arr['Description'],
+            "sort_order"=>$art_arr['sort_order'],
+        );
+        
+        $config['upload_path'] = 'assets/images/artist/';
+        $config['allowed_types'] = 'jpg|jpeg|png|gif';
+        $this->load->library('upload', $config);
+        $this->upload->initialize($config);
+        if($this->upload->do_upload('image')){
+            $fileData = $this->upload->data();
+            $my_data['image'] = $fileData['file_name'];
+        }
+        
+        if(!empty($art_arr['a_id'])){
+            $this->db->where('id', $art_arr['a_id']);
+            $this->db->update(DB_PREFIX.'artist', $my_data); 
+            return TRUE;
+        }else{  
+            $this->db->insert(DB_PREFIX.'artist', $my_data);
+            if($this->db->affected_rows() > 0) {
+                return TRUE;
+            }
+        }
+        
+        return FALSE;
+        
+    }
+    
     public function delete_artist($a_id) {
 
         $this->db->where('id', $a_id);
