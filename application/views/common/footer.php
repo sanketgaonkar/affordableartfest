@@ -7,18 +7,18 @@
 				<li><a href="#">Sponsors</a></li>
 			</ul>
 		</div>
-		<div class="container">
-			<div class="col-sm-12 col-xs-12 footer_logo">
-				<a href="<?=base_url()?>"><img src="<?= base_url("assets/images/mog_logo.png")?>" /></a>
+		<div class="container text-center">
+			<div class="col-sm-12 col-xs-12 footer_logo" >
+				<img src="<?= base_url("assets/images/mog_logo.png")?>" style="background:grey;"/>
 			</div>
 			<div class="col-sm-12 col-xs-12 icons_block">
 				<a href="#">
 					<i class="fa fa-instagram"></i>
 				</a>
-				<a href="#" class=" ">
+				<a href="#">
 					<i class="fa fa-facebook"></i>
 				</a>
-				<a href="#" class=" ">
+				<a href="#">
 					<i class="fa fa-twitter"></i>
 				</a>
 			</div>
