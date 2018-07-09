@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="<?= base_url('assets/css/footer.css') ?>"/>
     </head>
     <body>
-        <div class="navbar-wrapper">
+        <div class="navbar-wrapper container">
             <nav class="navbar">
                 <div class="navbar-header">
                     <div class="searchbar_block_mobile visible-xs col-xs-6">
@@ -78,16 +78,17 @@
                             </ul>
                         </li>
                         <li><?= anchor('home/vote', 'Vote') ?></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right hidden-xs">
-                        <li class="cursor_pointer">
+						<li class="cursor_pointer">
                             <a onclick="toggle_searchbar();"><i class="fa fa-search"></i></a>
                         </li>
-                        <div class="searchbar_block col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <div class="searchbar_block col-lg-4 col-md-4 col-sm-4 col-xs-12">
                             <input type="text" class="search_inpt"/>
                             <button class="btn btn-default search_btn"><i class="fa fa-search"></i></button>
                             <button class="btn btn-default search_btn" onclick="toggle_searchbar();"><i class="fa fa-times"></i></button>
                         </div>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right hidden-xs">
+                        
                     </ul>
                 </div>
             </nav>
