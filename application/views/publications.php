@@ -8,7 +8,7 @@
             <div class="col-md-12 media_blocks">
                 <?php foreach ($publications as $k => $v) { ?>
                     <div class="col-md-4 col-sm-6 col-xs-12 media_block">
-                        <a href="<?= (($v['Link']) ? base_url('assets/publications/'.$v['Link']) : "#") ?>" download>
+                        <a href="<?= (($v['Link']) ? base_url('assets/publications/'.$v['Link']) : "#") ?>" download="publication_<?= date('d/m/Y', strtotime($v['Date']))?>">
                             <div class="col-sm-12 col-xs-12 inner_block">
                                 <div class="col-sm-12 col-xs-12 image_block">
                                     <div class="overlay"></div>
