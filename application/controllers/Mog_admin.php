@@ -384,6 +384,16 @@ class Mog_admin extends CI_Controller {
         $data['add_new'] = anchor('Mog_admin/edit_artist','<i class="fa fa-plus"></i>','class="btn btn-primary" title="Add New"');
         $data['cancel'] = anchor('Mog_admin/Artist', '<button type="button" class="btn btn-default" title="Cancel"><i class="fa fa-reply"></i></button>');
         $this->load->model('admin/Art_model');
+        
+        if(isset($_POST) && !empty($_POST)){
+            $result = $this->Art_model->add_edit_artist($_POST);
+            if($result){
+                redirect('Mog_admin/Artist');
+            }else{
+                $data['errors'] = 1;
+            }
+        }
+        
         $data['artist'] = "";
         if($a_id)
             $data['artist'] = $this->Art_model->get_artist($a_id);
@@ -401,6 +411,16 @@ class Mog_admin extends CI_Controller {
         $data['add_new'] = anchor('Mog_admin/edit_category','<i class="fa fa-plus"></i>','class="btn btn-primary" title="Add New"');
         $data['cancel'] = anchor('Mog_admin/Category', '<button type="button" class="btn btn-default" title="Cancel"><i class="fa fa-reply"></i></button>');
         $this->load->model('admin/Art_model');
+        
+        if(isset($_POST) && !empty($_POST)){
+            $result = $this->Art_model->add_edit_category($_POST);
+            if($result){
+                redirect('Mog_admin/Category');
+            }else{
+                $data['errors'] = 1;
+            }
+        }
+        
         $data['category'] = "";
         if($c_id)
             $data['category'] = $this->Art_model->get_category($c_id);
