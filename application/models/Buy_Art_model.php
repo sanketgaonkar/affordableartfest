@@ -4,8 +4,14 @@ class Buy_Art_model extends CI_Model {
     
     public function get_arts() {
 
-        $result = $this->db->order_by('sort_order', 'ASC')
-                ->get(DB_PREFIX. 'artist_images');
+        $result = $this->db->select(DB_PREFIX."artist_images.*,".DB_PREFIX."category.Name as category,".DB_PREFIX."artist.Name as artist")
+                ->from(DB_PREFIX.'artist_images')
+                ->join(DB_PREFIX.'category',DB_PREFIX.'category.id='.DB_PREFIX.'artist_images.category_id')
+                ->join(DB_PREFIX.'artist',DB_PREFIX.'artist.id='.DB_PREFIX.'artist_images.artist_id')
+                ->order_by(DB_PREFIX.'artist_images.sort_order', 'ASC')
+                ->order_by(DB_PREFIX.'category.sort_order', 'ASC')
+                ->get();
+        
         if ($result->num_rows()) {
             return $result->result_array();
         }else{
