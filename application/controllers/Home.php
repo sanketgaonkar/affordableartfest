@@ -71,12 +71,12 @@ class Home extends CI_Controller {
         $this->load->view('publications',$data);
     }
     
-    public function buy_art(){
-        $data['page_title'] = 'Buy Art';
-        $data['page_heading'] = 'Buy Art';
+    public function Catalogue(){
+        $data['page_title'] = 'Catalogue';
+        $data['page_heading'] = 'Catalogue';
         $this->load->model('Buy_Art_model');
         $data['arts'] = $this->Buy_Art_model->get_arts();
-        $this->load->view('buy_arts',$data);
+        $this->load->view('catalogue',$data);
     }
     
     public function hot_to_apply(){
@@ -95,11 +95,27 @@ class Home extends CI_Controller {
         $data['page_heading'] = 'Application Form';
         $this->load->view('application_form',$data);
     }
+    
     public function Intern(){
         $data['page_title'] = 'Intern';
-        $data['page_heading'] = 'Intern';
+        $data['page_heading'] = 'Jobs';
+        $this->load->model('Intern_model');
+        $data['jobs'] = $this->Intern_model->get_jobs();
         $this->load->view('intern',$data);
     }
+    
+    public function job($id = 0){
+        $data['page_title'] = 'Job';
+        $data['page_heading'] = 'Job';
+        $this->load->model('Intern_model');
+        if($data['job'] = $this->Intern_model->get_job($id)){
+            $this->load->view('job',$data);
+        }else{
+            return('home/intern');
+        }
+        
+    }
+    
     public function Volunteer(){
         $data['page_title'] = 'Volunteers';
         $data['page_heading'] = 'Volunteers';
