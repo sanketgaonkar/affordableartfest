@@ -9,6 +9,9 @@
             <tr>
                 <th style="width: 10px">#</th>
                 <th>Name</th>
+                <th>Image</th>
+                <th>Category</th>
+                <th>Artist</th>
                 <th>Sort Order</th>
                 <th class="text-center" style="width: 130px"><i class="fa fa-cog"></i></th>
             </tr>
@@ -19,6 +22,9 @@
             <tr>
                 <td><?= $i++ ?></td>
                 <td><?= $value['Name'] ?></td>
+                <td><img src="<?= base_url('assets/images/artist_gallery/' . $value['image']) ?>" height="50px"/></td>
+                <td><?= $value['category'] ?></td>
+                <td><?= $value['artist'] ?></td>
                 <td><?= $value['sort_order'] ?></td>
                 <td class="text-center">
                     <?= anchor('Mog_admin/edit_arts/' . $value['id'], '<button class="btn btn-primary"><i class="fa fa-pencil"></i></button>') ?>

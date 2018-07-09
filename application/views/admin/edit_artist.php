@@ -22,7 +22,7 @@
             <input type="file" name="image" class="form-control" id="image"/>
         </div>
         <div class="form-group col-md-6">
-            <img alt="No Image" src="<?= base_url('assets/images/gaaf/' . (isset($artist['image']) ? $artist['image'] : "")) ?>" width="50%"/>
+            <img alt="No Image" src="<?= base_url('assets/images/artist/' . (isset($artist['image']) ? $artist['image'] : "")) ?>" width="50%"/>
         </div>
 
     </form>

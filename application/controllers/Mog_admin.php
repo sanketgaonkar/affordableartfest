@@ -407,10 +407,10 @@ class Mog_admin extends CI_Controller {
         $this->load->view('admin/edit_category',$data);
     }
     public function edit_Arts($a_id = 0){
-        $data['page_title'] = 'Arts';
-        $data['page_heading'] = 'Arts List';
-		$data['breadcrums'][] = '<li>'.anchor('Mog_admin/Arts','Arts','class="active"').'</li>';
-		if($a_id)
+        $data['page_title'] = 'Add Arts';
+        $data['page_heading'] = 'Add Arts';
+        $data['breadcrums'][] = '<li>'.anchor('Mog_admin/Arts','Arts','class="active"').'</li>';
+	if($a_id)
             $data['breadcrums'][] = '<li>'.anchor('Mog_admin/edit_Artist/'.$a_id,'Artist Edit','class="active"').'</li>';
         else
             $data['breadcrums'][] = '<li>'.anchor('Mog_admin/edit_Artist','Artist Add','class="active"').'</li>';
@@ -419,12 +419,24 @@ class Mog_admin extends CI_Controller {
         $data['cancel'] = anchor('Mog_admin/Arts', '<button type="button" class="btn btn-default" title="Cancel"><i class="fa fa-reply"></i></button>');
         $this->load->model('admin/Art_model');
         
+        if(isset($_POST) && !empty($_POST)){
+            $result = $this->Art_model->add_edit_arts($_POST);
+            if($result){
+                redirect('Mog_admin/Arts');
+            }else{
+                $data['errors'] = 1;
+            }
+        }
+        
         $data['artists'] = $this->Art_model->get_artists();
         $data['categories'] = $this->Art_model->get_categories();
         
         $data['arts'] = "";
-        if($a_id)
+        if($a_id){
+            $data['page_title'] = 'Edit Arts';
+            $data['page_heading'] = 'Edit Arts';
             $data['arts'] = $this->Art_model->get_art($a_id);
+        }
         $this->load->view('admin/edit_arts',$data);
     }
     public function delete_Artist($a_id = 0){
