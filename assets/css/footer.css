@@ -3,49 +3,54 @@
 
 #footer
 {
-  	background:rgb(41,194,225);
+  	background:rgb(33,33,33);
 	color:white;
 	text-align:center;
 	padding:0;
 }
 #footer .container
 {
-	padding-top:40px;
-	padding-bottom:40px;
+	padding-top:10px;
+	padding-bottom:10px;
 }
-#footer .footer_topic_head
+#footer .container .block
 {
-	font-size:14px;
-	text-transform:uppercase;
-	letter-spacing:1.5px;
-	font-weight:600;
-	font-family: PIERSANS-LIGHT_0;
-	margin-bottom:20px;
-}
-#footer .btm_block_wid_margin
-{
-	margin-top:60px;
-}
-#footer .footer_topic_content
-{
+	margin-bottom:10px;
 	word-break:break-word;
+	font-size:14px;
 }
-#footer .footer_topic_content .social_link a
+#footer .icons_block
+{
+	margin-bottom:10px;
+}
+#footer .icons_block  a
 {
 	color:#ffffff;
+	margin-right:20px;
 }
-#footer .footer_topic_content .social_link i
+#footer .icons_block  a i
 {
-	font-size:32px;
+	font-size:25px;
+	padding-top:6px;
+	border-radius:50%;
+	height:40px;
+	width:40px;
+	border:1px solid #fff;
 }
-#footer .footer_topic_content .social_link a:hover
+#footer .icons_block  a:hover
 {
-	color:rgb(33,33,33);
+	color:rgb(42,175,220);
 	transition:all ease-in-out 0.3s;
+}
+#footer .icons_block  a:hover i
+{
+	border-color:rgb(42,175,220);
+	transition:border-color ease-in-out 0.4s;
 }
 #footer .copyright_footer
 {
-	background:rgb(42,175,220);
+	background:rgb(245,245,245);
+	color:rgb(33,33,33);
 	padding:10px;
 	font-size:12px;
 }
@@ -53,6 +58,7 @@
 {
 	margin:0;
 	padding:8px 0;
+	font-size:12px;
 }
 .footer_links li
 {
@@ -68,8 +74,12 @@
 }
 .footer_links li a:hover
 {
-	color:rgb(33,33,33);
+	color:rgb(42,175,220);
 	transition:all ease-in-out 0.3s;
+}
+.footer_logo
+{
+	margin-bottom:15px;
 }
 .footer_logo img
 {
@@ -79,26 +89,9 @@
 
 @media (max-width:475px){
 
-	#footer .container .block
-	{
-		margin-bottom:40px;
-		transition:all ease-in-out 0.3s;
-	}
-	#footer .container .block:last-child
-	{
-		margin-bottom:0px;
-	}
 	.footer_links li a
 	{
 		font-size:10px;
-	}
-	#footer .btm_block_wid_margin
-	{
-		margin-top:0px;
-	}
-	.footer_logo
-	{
-		margin-top:30px;
 	}
 
 }
