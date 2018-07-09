@@ -1,5 +1,5 @@
 <?php include 'common/header.php' ?>
-<div class="col-sm-12 col-xs-12 min_height_container">
+<div class="container min_height_container">
 <div class="index">
     <div id="Index_Carousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -23,6 +23,13 @@
         </a>
     </div>
 </div>
+<div class="col-sm-12 col-xs-12 video_container">
+	<video width="100%" controls autoplay>
+		<source src="<?= base_url('assets/videos/logo.mp4')?>" type="video/mp4">
+		<source src="<?= base_url('assets/videos/logo.ogg')?>" type="video/ogg">
+		Your browser does not support the video tag.
+	</video>
+</div>
 <div class="feeds_container">
     <div class="container-fluid feeds">
         <div class="col-md-4 col-sm-12 col-xs-12">
@@ -35,17 +42,17 @@
         </div>
         <div class="col-md-4 col-sm-12 col-xs-12">
             <div class="feed_container col-sm-12 col-xs-12">
-                <p class="hdng"><i class="fa fa-instagram"></i> Feeds</p>
+                <p class="hdng twitter"><i class="fa fa-twitter"></i> Feeds</p>
                 <div class="feeds_item custom_scrollbar col-sm-12 col-xs-12">
-                    <img src="<?= base_url('assets/images/instagram.jpg')?>" width="100%"/>
+                    <img src="<?= base_url('assets/images/twitter_feeds.jpg')?>" width="100%"/>
                 </div>
             </div>
         </div>
-        <div class="col-md-4 col-sm-12 col-xs-12">
+		 <div class="col-md-4 col-sm-12 col-xs-12">
             <div class="feed_container col-sm-12 col-xs-12">
-                <p class="hdng"><i class="fa fa-twitter"></i> Feeds</p>
+                <p class="hdng"><i class="fa fa-instagram"></i> Feeds</p>
                 <div class="feeds_item custom_scrollbar col-sm-12 col-xs-12">
-                    <img src="<?= base_url('assets/images/twitter_feeds.jpg')?>" width="100%"/>
+                    <img src="<?= base_url('assets/images/instagram.jpg')?>" width="100%"/>
                 </div>
             </div>
         </div>
