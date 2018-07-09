@@ -71,12 +71,12 @@ class Home extends CI_Controller {
         $this->load->view('publications',$data);
     }
     
-    public function buy_art(){
-        $data['page_title'] = 'Buy Art';
-        $data['page_heading'] = 'Buy Art';
+    public function Catalogue(){
+        $data['page_title'] = 'Catalogue';
+        $data['page_heading'] = 'Catalogue';
         $this->load->model('Buy_Art_model');
         $data['arts'] = $this->Buy_Art_model->get_arts();
-        $this->load->view('buy_arts',$data);
+        $this->load->view('catalogue',$data);
     }
     
     public function hot_to_apply(){

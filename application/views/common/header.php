@@ -58,7 +58,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 Art <i class="caret"></i></a>
                             <ul class="dropdown-menu">
-                                <li><?= anchor('home/buy_art', 'Catalogue') ?></li>
+                                <li><?= anchor('home/Catalogue', 'Catalogue') ?></li>
                                 <li><?= anchor('home/select_artist', 'Art Inquiry') ?></li>
                             </ul>
                         </li>
