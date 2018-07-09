@@ -11,7 +11,7 @@ class Buy_Art_model extends CI_Model {
                 ->order_by(DB_PREFIX.'artist_images.sort_order', 'ASC')
                 ->order_by(DB_PREFIX.'category.sort_order', 'ASC')
                 ->get();
-        echo $this->db->last_query();
+        
         if ($result->num_rows()) {
             return $result->result_array();
         }else{
