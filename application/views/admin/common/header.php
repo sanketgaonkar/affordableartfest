@@ -109,6 +109,7 @@
                         <li class="<?=(($method=="partners_sponsors")?"active":"")?>"><?= anchor('Mog_admin/partners_sponsors', '<i class="fa fa-user"></i> <span>Partners & Sponsors</span>') ?></li>
                         <li class="<?=(($method=="publications")?"active":"")?>"><?= anchor('Mog_admin/publications', '<i class="fa fa-user"></i> <span>Publication</span>') ?></li>
                         <li class="<?=(($method=="media")?"active":"")?>"><?= anchor('Mog_admin/media', '<i class="fa fa-user"></i> <span>Media</span>') ?></li>
+                        <li class="<?=(($method=="Intern"|| $method=="edit_intern")?"active":"")?>"><?= anchor('Mog_admin/Intern', '<i class="fa fa-user"></i> <span>Intern</span>') ?></li>
 
                     </ul>
                     <!-- /.sidebar-menu -->

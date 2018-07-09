@@ -95,11 +95,27 @@ class Home extends CI_Controller {
         $data['page_heading'] = 'Application Form';
         $this->load->view('application_form',$data);
     }
+    
     public function Intern(){
         $data['page_title'] = 'Intern';
-        $data['page_heading'] = 'Intern';
+        $data['page_heading'] = 'Jobs';
+        $this->load->model('Intern_model');
+        $data['jobs'] = $this->Intern_model->get_jobs();
         $this->load->view('intern',$data);
     }
+    
+    public function job($id = 0){
+        $data['page_title'] = 'Job';
+        $data['page_heading'] = 'Job';
+        $this->load->model('Intern_model');
+        if($data['job'] = $this->Intern_model->get_job($id)){
+            $this->load->view('job',$data);
+        }else{
+            return('home/intern');
+        }
+        
+    }
+    
     public function Volunteer(){
         $data['page_title'] = 'Volunteers';
         $data['page_heading'] = 'Volunteers';
