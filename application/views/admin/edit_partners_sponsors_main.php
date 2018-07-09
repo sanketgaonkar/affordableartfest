@@ -49,7 +49,17 @@
 <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
 <script>
     $(document).ready(function () {
-        $('#summernote').summernote();
+        $('#summernote').summernote({
+            toolbar: [
+                ['style', ['style', 'bold', 'italic', 'underline', 'clear']],
+                ['font', ['fontname','strikethrough', 'superscript', 'subscript']],
+                ['fontsize', ['fontsize']],
+                ['color', ['color']],
+                ['para', ['ul', 'paragraph']],
+                ['height', ['height']]
+            ]
+        });
+        
         $('#level').change(function(){
             if($(this).val() == 2){
                 $('.desc').removeClass('hide');
