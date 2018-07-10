@@ -29,7 +29,7 @@
                     </button>
 					<a class="navbar-brand" href="<?= base_url() ?>">
 						<div class="left_mog_logo_container">
-							<img src="<?= base_url("assets/images/mog_logo.png") ?>">
+							<img src="<?= base_url("assets/images/GAAF v1.jpg") ?>">
 						</div>
 					</a>
                 </div>
@@ -94,7 +94,7 @@
                     <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs">
                         <a class="right_black_logo_anchor" href="http://museumofgoa.com/" target="_new">
 							<div class="black_logo_div">
-								<img src="<?= base_url("assets/images/mog_black.jpeg") ?>">
+								<img src="<?= base_url("assets/images/MOG logo.jpg") ?>">
 							</div>
 						</a>
                     </ul>
