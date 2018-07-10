@@ -2,38 +2,38 @@
 <style>
     .job div ul{
         list-style: unset;
+		padding-left:20px;
     }
 </style>
 <div class="col-sm-12 col-xs-12 min_height_container">
     <div class="container margin_top_container">
         <div class="col-md-12 job">
-            
-            <div class="row btm_block">
-                <strong>Vacancy: <?=$job['Vacancy']?></strong>
+            <div class="h2">
+                <div class="head_underline"><strong>Vacancy: <?=$job['Vacancy']?></strong></div>
             </div>
-            <div class="row btm_block">
-                <strong>Description:</strong>
-                <div><?=$job['Description']?></div>
+            <div class="col-md-12 btm_block">
+                <h3>Description:</h3>
+                <div class="col-md-12 col-xs-12"><?=$job['Description']?></div>
             </div>
-            <div class="row btm_block">
-                <strong>Job Role:</strong>
-                <div><?=$job['Job_Role']?></div>
+            <div class="col-md-12 btm_block">
+                <h3>Job Role:</h3>
+                <div class="col-md-12 col-xs-12"><?=$job['Job_Role']?></div>
             </div>
-            <div class="row btm_block">
-                <strong>Requirements:</strong>
-                <div><?=$job['Requirements']?></div>
+            <div class="col-md-12 btm_block">
+                <h3>Requirements:</h3>
+                <div class="col-md-12 col-xs-12"><?=$job['Requirements']?></div>
             </div>
-            <div class="row btm_block">
-                <strong>Working Hours:</strong>
-                <div><?=$job['Working_Hours']?></div>
+            <div class="col-md-12 btm_block">
+                <h3>Working Hours:</h3>
+                <div class="col-md-12 col-xs-12"><?=$job['Working_Hours']?></div>
             </div>
-            <div class="row btm_block">
-                <strong>Salary:</strong>
-                <div><?=$job['Salary']?></div>
+            <div class="col-md-12 btm_block">
+                <h3>Salary:</h3>
+                <div class="col-md-12 col-xs-12"><?=$job['Salary']?></div>
             </div>
-            <div class="row btm_block">
-                <strong>Application Process:</strong>
-                <div><?=$job['Application_Process']?></div>
+            <div class="col-md-12 btm_block">
+                <h3>Application Process:</h3>
+                <div class="col-md-12 col-xs-12"><?=$job['Application_Process']?></div>
             </div>
             
         </div>
