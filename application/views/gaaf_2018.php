@@ -18,12 +18,12 @@
                art at affordable prices through Goa Affordable Art Fest 2018 (GAAF 2018)
             </div>
             <div class="col-md-12 col-xs-12 margin_tb_20">
-                <div class="col-md-12 col-xs-12">
-                    <img src="<?= base_url('assets/images/about_us/plan-5-1829187995.jpg') ?>" width="100%" />
+                <div class="col-md-3 col-sm-6 col-xs-10">
+                    <img src="<?= base_url('assets/images/folder_2/image_5.jpg') ?>" width="100%" />
                 </div>
             </div>
              <div class="col-md-12 col-xs-12 margin_tb_20 margin_bottom_30">
-                <div class="col-md-12 col-xs-12 text-center">
+                <div class="col-md-12 col-xs-12">
                     <a href="#"><button class="btn btn-primary btn-lg">Apply now</button></a>
                 </div>
             </div>
