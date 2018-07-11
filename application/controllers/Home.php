@@ -5,6 +5,8 @@ class Home extends CI_Controller {
 
     public function index(){
         $data['page_title'] = 'Home';
+        $this->load->model('Home_Banners_model');
+        $data['banners'] = $this->Home_Banners_model->get_banners();
         $this->load->view('index',$data);
     }
     

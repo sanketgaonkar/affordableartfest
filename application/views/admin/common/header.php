@@ -92,6 +92,7 @@
                     <ul class="sidebar-menu" data-widget="tree">
 
                         <li class="<?=(($method=="index")?"active":"")?>"><?= anchor('Mog_admin/', '<i class="fa fa-dashboard"></i> <span>Dashboard</span>') ?></li>
+                        <li class="<?=(($method=="home_banner")?"active":"")?>"><?= anchor('Mog_admin/home_banner', '<i class="fa fa-dashboard"></i> <span>Home Banners</span>') ?></li>
                         <li class="treeview <?=(($method=="Category" || $method=="Artist" || $method=="Arts" || $method=="edit_artist" || $method=="edit_category" || $method=="edit_arts")?"active":"")?>">
                             <a href="#"><i class="fa fa-link"></i> <span>Art</span>
                                 <span class="pull-right-container">
