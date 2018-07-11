@@ -63,6 +63,13 @@
             <input type="number" name="Year" class="form-control" id="Year" value="<?= (isset($arts['Year'])) ? $arts['Year'] : "" ?>" required/>
         </div>
         <div class="form-group col-md-6">
+            <label for="Active">Active:</label>
+            <select name="Active" class="form-control">
+                <option value="1" <?= (isset($arts['Active']) && $arts['Active'] == 1) ? "selected" : "" ?>>Active</option>
+                <option value="0" <?= (isset($arts['Active']) && $arts['Active'] == 0) ? "selected" : "" ?>>In-Active</option>
+            </select>
+        </div>
+        <div class="form-group col-md-6">
             <label for="image">Image:</label>
             <input type="file" name="image" class="form-control" id="image"/>
         </div>
