@@ -525,4 +525,51 @@ class Mog_admin extends CI_Controller {
         redirect('Mog_admin/intern');
     }
     
+    public function home_banner(){
+        $data['page_title'] = 'Home Banners';
+        $data['page_heading'] = 'Home Banners';
+        $data['breadcrums'][] = '<li>'.anchor('Mog_admin/Home_Banners','Home Banners','class="active"').'</li>';
+        $data['add_new'] = anchor('Mog_admin/edit_Home_Banner','<i class="fa fa-plus"></i>','class="btn btn-primary" title="Add New"');
+        $this->load->model('admin/Home_Banners_model');
+        $data['interns'] = $this->Home_Banners_model->get_banners();
+        $this->load->view('admin/home_banner',$data);
+    }
+
+    public function edit_home_banner($b_id = 0){
+        $data['page_title'] = 'Add Home Banner';
+        $data['page_heading'] = 'Add Home Banner';
+        $data['cancel'] = anchor('Mog_admin/home_banner', '<button type="button" class="btn btn-default" title="Cancel"><i class="fa fa-reply"></i></button>');
+	$data['breadcrums'][] = '<li>'.anchor('Mog_admin/home_banner','Home Banners','class="active"').'</li>';
+	if($b_id)
+            $data['breadcrums'][] = '<li>'.anchor('Mog_admin/edit_home_banner/'.$b_id,'Edit Home Banner','class="active"').'</li>';
+        else
+            $data['breadcrums'][] = '<li>'.anchor('Mog_admin/edit_home_banner','Add Home Banner','class="active"').'</li>';
+        $data['b_id'] = $b_id;
+        $data['cancel'] = anchor('Mog_admin/home_banner', '<button type="button" class="btn btn-default" title="Cancel"><i class="fa fa-reply"></i></button>');
+        $this->load->model('admin/Home_Banners_model');
+        
+        if(isset($_POST) && !empty($_POST)){
+            $result = $this->Home_Banners_model->add_edit_home_banner($_POST);
+            if($result){
+                redirect('Mog_admin/home_banner');
+            }else{
+                $data['errors'] = 1;
+            }
+        }
+        
+        $data['banner'] = "";
+        if($b_id){
+            $data['page_title'] = 'Edit Home Banner';
+            $data['page_heading'] = 'Edit Home Banner';
+            $data['banner'] = $this->Home_Banners_model->get_banner($b_id);
+        }
+        $this->load->view('admin/edit_home_banner',$data);
+    }
+    
+    public function delete_home_banner($b_id = 0){
+        $this->load->model('admin/Home_Banners_model');
+        $data['arts'] = $this->Home_Banners_model->delete_banner($i_id);
+        redirect('Mog_admin/home_banner');
+    }
+    
 }
