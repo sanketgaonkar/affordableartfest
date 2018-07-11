@@ -13,9 +13,9 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <?php for ($i = 0; $i < count($banners); $i++) { if ($i == 0) {?>
-                    <div class="item active"><img src="<?= base_url('assets/images/home_banners/'.$banners[$i]['image']) ?>"/></div>
+                <div class="item active"><a href="<?=(($banners[$i]['Link'])?$banners[$i]['image']:"#")?>"><img src="<?= base_url('assets/images/home_banners/'.$banners[$i]['image']) ?>"/></a></div>
                 <?php } else { ?>
-                    <div class="item"><img src="<?= base_url('assets/images/home_banners/'.$banners[$i]['image']) ?>"/></div>
+                <div class="item"><a href="<?=(($banners[$i]['Link'])?$banners[$i]['image']:"#")?>"><img src="<?= base_url('assets/images/home_banners/'.$banners[$i]['image']) ?>"/></a></div>
                 <?php } } ?>
             </div>
             <!-- Left and right controls -->
