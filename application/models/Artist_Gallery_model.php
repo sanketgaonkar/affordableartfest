@@ -24,6 +24,7 @@ class Artist_Gallery_model extends CI_Model {
         
         $result1 = $this->db->order_by('sort_order', 'ASC')
                 ->where('artist_id', $artist_id)
+                ->where('Active=1')
                 ->get('mog_artist_images');
         if ($result1->num_rows()) {
             $arr['images'] = $result1->result_array();
@@ -36,7 +37,8 @@ class Artist_Gallery_model extends CI_Model {
 
         $arr = array('artist_info' => array(),'image' => array());
         
-        $result = $this->db->where('id',$artist_id)->get('mog_artist');
+        $result = $this->db->where('id',$artist_id)
+                ->get('mog_artist');
         if ($result->num_rows()) {
             $arr['artist_info'] = json_decode(json_encode($result->first_row()), True);
         }
