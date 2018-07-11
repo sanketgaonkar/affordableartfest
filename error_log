@@ -3,3 +3,13 @@
 [06-Jul-2018 19:17:21 Etc/GMT] PHP Fatal error:  Can't use function return value in write context in /home/afforigx/public_html/application/views/admin/login.php on line 26
 [06-Jul-2018 19:18:51 Etc/GMT] PHP Fatal error:  Can't use function return value in write context in /home/afforigx/public_html/application/views/admin/login.php on line 26
 [06-Jul-2018 19:18:52 Etc/GMT] PHP Fatal error:  Can't use function return value in write context in /home/afforigx/public_html/application/views/admin/login.php on line 26
+[10-Jul-2018 06:03:07 Etc/GMT] PHP Parse error:  syntax error, unexpected '===' (T_IS_IDENTICAL) in /home/afforigx/public_html/application/config/config.php on line 526
+[10-Jul-2018 06:03:09 Etc/GMT] PHP Parse error:  syntax error, unexpected '===' (T_IS_IDENTICAL) in /home/afforigx/public_html/application/config/config.php on line 526
+[10-Jul-2018 06:04:46 Etc/GMT] PHP Parse error:  syntax error, unexpected '===' (T_IS_IDENTICAL) in /home/afforigx/public_html/application/config/config.php on line 526
+[10-Jul-2018 06:04:47 Etc/GMT] PHP Parse error:  syntax error, unexpected '===' (T_IS_IDENTICAL) in /home/afforigx/public_html/application/config/config.php on line 526
+[10-Jul-2018 06:05:04 Etc/GMT] PHP Parse error:  syntax error, unexpected '<' in /home/afforigx/public_html/application/config/config.php on line 526
+[10-Jul-2018 06:05:05 Etc/GMT] PHP Parse error:  syntax error, unexpected '<' in /home/afforigx/public_html/application/config/config.php on line 526
+[10-Jul-2018 06:05:28 Etc/GMT] PHP Parse error:  syntax error, unexpected '>>' (T_SR) in /home/afforigx/public_html/application/config/config.php on line 1049
+[10-Jul-2018 06:05:29 Etc/GMT] PHP Parse error:  syntax error, unexpected '>>' (T_SR) in /home/afforigx/public_html/application/config/config.php on line 1049
+[10-Jul-2018 06:06:05 Etc/GMT] PHP Parse error:  syntax error, unexpected '<<' (T_SL), expecting ')' in /home/afforigx/public_html/application/config/database.php on line 79
+[10-Jul-2018 06:06:06 Etc/GMT] PHP Parse error:  syntax error, unexpected '<<' (T_SL), expecting ')' in /home/afforigx/public_html/application/config/database.php on line 79

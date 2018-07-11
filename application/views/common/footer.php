@@ -1,24 +1,25 @@
-	<div class="container" id="footer">
+	<div class="container">
+	<div class=" col-sm-12 col-xs-12" id="footer">
 		<div class="container-fluid">
 			<ul class="footer_links">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Contact</a></li>
-				<li><a href="#">Sponsors</a></li>
+				<li><?= anchor('/', 'Home') ?></li>
+				<li><?= anchor('home/about_us', 'About') ?></li>
+				<li><?= anchor('home/contact_us', 'Contact') ?></li>
+				<li><?= anchor('home/partners_sponsors', 'Sponsors') ?></li>
 			</ul>
 		</div>
-		<div class="container">
-			<div class="col-sm-12 col-xs-12 footer_logo">
-				<a href="<?=base_url()?>"><img src="<?= base_url("assets/images/mog_logo.png")?>" /></a>
+		<div class="container text-center">
+			<div class="col-sm-12 col-xs-12 footer_logo" >
+				<img src="<?= base_url("assets/images/mog_logo.png")?>" style="background:grey;"/>
 			</div>
 			<div class="col-sm-12 col-xs-12 icons_block">
-				<a href="#">
+				<a href="https://www.instagram.com/affordableartfest/" target="_new">
 					<i class="fa fa-instagram"></i>
 				</a>
-				<a href="#" class=" ">
+				<a href="https://www.facebook.com/affordableartfest/" target="_new">
 					<i class="fa fa-facebook"></i>
 				</a>
-				<a href="#" class=" ">
+				<a href="https://twitter.com/GAAFofficial/" target="_new">
 					<i class="fa fa-twitter"></i>
 				</a>
 			</div>
@@ -35,6 +36,7 @@
 		<div class="container-fluid copyright_footer">
 			Copyright &copy; MOG 2018
 		</div>
+	</div>
 	</div>
 	<!-- Bootstrap core JavaScript-->
 	<script src="<?=base_url('assets/js/jquery.min.js')?>"></script>

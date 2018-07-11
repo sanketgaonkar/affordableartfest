@@ -40,7 +40,6 @@
 body {
     font-family: PIERSANS-LIGHT_0;
     color: rgb(33,33,33);
-   
     font-size: 12pt;
     background:rgb(245,245,245);
 }
@@ -64,16 +63,44 @@ ul{
 {
 	margin-bottom:10px;
 }
-.navbar-wrapper .navbar .navbar-brand
+.navbar-wrapper .navbar-brand
+{
+	padding:0px;
+}
+.left_mog_logo_container
 {
 	padding-top:1px;
-}
-.navbar-wrapper .navbar .navbar-brand img
-{
 	width: 125px;
+	height: 125px;
+	z-index:111;
+	position:absolute;
+	border:4px solid rgb(245,245,245);
+	transition:all ease-in-out 0.3s;
+}
+.left_mog_logo_container img
+{
+	height:100%;
+	width:100%;
+}
+.right_black_logo_anchor
+{
+	padding:0 !important;
+	margin:0 !important;
+}
+.black_logo_div
+{
+	margin-top:-17px;
+	height:125px;
+	width:125px;
 	z-index:111;
 	position:absolute;
 	border:5px solid rgb(245,245,245);
+	right:0;
+}
+.black_logo_div img
+{
+	width:100%;
+	height:100%;
 	transition:all ease-in-out 0.3s;
 }
 #navbar{
@@ -81,10 +108,16 @@ ul{
     margin-bottom:5px;
 	padding-left:180px;
 }
+#navbar .bordered_menu
+{
+	border:1px solid rgb(131,131,131);
+	border-radius:25px;
+	padding:0 15px;
+}
 
 #navbar a{
 	padding:0px;
-	margin:7px 10px;
+	margin:7px 15px;
 	letter-spacing:0.5px;
 	color:rgb(33,33,33);
 	font-size:14px;
@@ -110,7 +143,7 @@ ul{
 .navbar-toggle{
 	border:none;
 	padding:0;
-	padding-top:10px;
+	padding-top:7px;
 	transition:all ease-in-out 0.3s;	
 }
 .navbar-toggle i{
@@ -132,13 +165,14 @@ ul{
 {
 	display:none;
 	position:absolute;
-	right:10px;
-	z-index:111;
-	background:white;
-	border:1px solid rgb(220,220,220);
+	right:125px;
+	z-index:222;
+	background:rgb(245,245,245);
+	border:1px solid rgb(131,131,131);
 	border-radius:10px;
 	padding:0;
 	height:auto;
+	bottom:0px;
 }
 .xs_search_icon
 {
@@ -155,22 +189,27 @@ ul{
 .searchbar_block .search_inpt, .searchbar_block_mobile .search_inpt
 {
 	width:80%;
-	padding:6px 10px;
+	padding:8px 10px;
 	outline:none;
 	border:none;
 	background:transparent;
 }
 .searchbar_block .search_btn, .searchbar_block_mobile .search_btn
 {
-	width:8%;
-	padding:8px 0px;
+	width:9%;
+	padding:11px 0px;
 	margin-top:-3px;
 	border:none !important;
 	background:none !important;
 	outline:none !important;
 	box-shadow:none;
 	border-radius:0;
-	border-left:1px solid rgb(220,220,220) !important;
+	border-left:1px solid rgb(131,131,131) !important;
+}
+.searchbar_block_mobile .search_btn
+{
+	margin-top:-6px;
+	padding:9px 0px;
 }
 .searchbar_block .search_btn:hover, .searchbar_block_mobile .search_btn:hover
 {
@@ -273,10 +312,11 @@ ul{
 @media (max-width: 1024px){
 	
 	#navbar{
-		padding-left:160px;
+		padding-left:150px;
 	}
 	#navbar a{
-		margin:7px 25px;
+		margin:7px 12px;
+		font-size:13px;
 	}
 	
 }
@@ -284,40 +324,56 @@ ul{
 	
 	#navbar
 	{
-		padding-left:120px;
+		padding-left:100px;
 	}
 	#navbar a{
-		margin:7px 15px;
-		font-size:14px;
+		margin:7px 10px;
+		font-size:12px;
 	}
-	.navbar-wrapper .navbar .navbar-brand img
-	{
-		width: 80px;
-	}
+	.left_mog_logo_container
+    {
+        width: 80px;
+    	height: 80px;
+    }
+    .black_logo_div
+    {
+    	margin-top:-17px;
+    	height:80px;
+    	width:80px;
+    }
 	.searchbar_block .search_inpt, .searchbar_block_mobile .search_inpt
 	{
-		width:72%;
+		width:79%;
 	}
 	.searchbar_block .search_btn, .searchbar_block_mobile .search_btn
 	{
-		width:10%;
+		width:9%;
 	}
-	.head_underline:before
+	.head_underline
 	{
-		border-left:none;
+	    font-size:21px;
 	}
-	
+
 }
 
 @media (max-width: 425px) {
 	#navbar{
 		padding-left:20px;
 	}
+	#navbar .bordered_menu
+	{
+		border:none;
+	}
 	#navbar a{
-		margin:15px;
+		margin:15px 5px;
 	}
 	#navbar a .caret{
 		float:right;
+	}
+	.dropdown-menu
+	{
+		background:rgb(240,240,240) !important;
+		padding-left:10px;
 	}
 	.searchbar_block, .searchbar_block_mobile
 	{

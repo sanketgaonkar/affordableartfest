@@ -49,12 +49,23 @@ class Home extends CI_Controller {
         $data['partners'] = $this->Partners_Sponsors_model->get_partners_sponsors();
         $this->load->view('partners_sponsors',$data);
     }
-    
+    public function gaaf_vision(){
+        $data['page_title'] = 'GAAF Vision';
+        $this->load->view('gaaf_vision');
+    }
     public function gaaf_2017(){
         $data['page_title'] = 'GAAF 2017';
         $this->load->model('GAAF_Gallery_model');
         $data['gaaf'] = $this->GAAF_Gallery_model->get_arts();
         $this->load->view('gaaf_2017',$data);
+    }
+    public function gaaf_2018(){
+        $data['page_title'] = 'GAAF 2018';
+        $this->load->view('gaaf_2018');
+    }
+	public function supporters(){
+        $data['page_title'] = 'Supporters';
+        $this->load->view('supporters');
     }
     public function media(){
         $data['page_title'] = 'Media';
