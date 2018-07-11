@@ -13,9 +13,9 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <?php for ($i = 0; $i < count($banners); $i++) { if ($i == 0) {?>
-                <div class="item active"><a href="<?=(($banners[$i]['Link'])?$banners[$i]['image']:"#")?>"><img src="<?= base_url('assets/images/home_banners/'.$banners[$i]['image']) ?>"/></a></div>
+                <div class="item active"><img class="openurl" data-url="<?=$banners[$i]['Link']?>" src="<?= base_url('assets/images/home_banners/'.$banners[$i]['image']) ?>"></div>
                 <?php } else { ?>
-                <div class="item"><a href="<?=(($banners[$i]['Link'])?$banners[$i]['image']:"#")?>"><img src="<?= base_url('assets/images/home_banners/'.$banners[$i]['image']) ?>"/></a></div>
+                <div class="item"><img class="openurl" data-url="<?=$banners[$i]['Link']?>" src="<?= base_url('assets/images/home_banners/'.$banners[$i]['image']) ?>"></div>
                 <?php } } ?>
             </div>
             <!-- Left and right controls -->
@@ -65,4 +65,11 @@
         </div>
     </div>
 </div>
-<?php include 'common/footer.php' ?>			
+<?php include 'common/footer.php' ?>		
+<script>
+    $(document).ready(function (){
+        $('.openurl').click(function (){
+           window.open($(this).data('url'),"_self");
+        });
+    });
+</script>
