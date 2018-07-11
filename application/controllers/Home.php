@@ -63,6 +63,10 @@ class Home extends CI_Controller {
         $data['page_title'] = 'GAAF 2018';
         $this->load->view('gaaf_2018');
     }
+	public function supporters(){
+        $data['page_title'] = 'Supporters';
+        $this->load->view('supporters');
+    }
     public function media(){
         $data['page_title'] = 'Media';
         $data['page_heading'] = 'Media';

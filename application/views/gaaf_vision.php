@@ -19,10 +19,10 @@
             </div>
             <div class="col-md-12 col-xs-12 margin_bottom_30">
                 <div class="col-md-6 col-xs-12 margin_tb_20">
-                    <img src="<?= base_url('assets/images/about_us/capture-9446543338.jpg') ?>" width="100%" />
+                    <img src="<?= base_url('assets/images/folder_2/Image_1.jpg') ?>" width="100%" />
                 </div>
                 <div class="col-md-6 col-xs-12 margin_tb_20">
-                     <img src="<?= base_url('assets/images/about_us/p-908952997.jpg') ?>" width="100%" />
+                     <img src="<?= base_url('assets/images/folder_2/Image_2.jpg') ?>" width="100%" />
                 </div>
             </div>
         </div>

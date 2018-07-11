@@ -45,7 +45,7 @@
                                 <li><?= anchor('home/gaaf_2017', 'GAAF 2017') ?></li>
                                 <li><?= anchor('home/gaaf_2018', 'GAAF 2018') ?></li>
                                 <li><?= anchor('home/Team', 'Team') ?></li>
-                                <li><?= anchor('home/Supporters', 'Supporters') ?></li>
+                                <li><?= anchor('home/supporters', 'Supporters') ?></li>
                             </ul>
                         </li>
                         <li class="dropdown">
