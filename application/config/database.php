@@ -76,15 +76,9 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-<<<<<<< HEAD
 	'username' => 'afforigx_artfest',
 	'password' => 'artfest2018',
 	'database' => 'afforigx_affordableartfest',
-=======
-	'username' => 'root',
-	'password' => '',
-	'database' => 'affordableartfest',
->>>>>>> development
 	'dbdriver' => 'mysqli',
 	'dbprefix' => 'mog_',
 	'pconnect' => FALSE,

@@ -41,9 +41,9 @@
                                 About <i class="caret"></i>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="">GAAF Vision</a></li>
+                                <li><?= anchor('home/gaaf_vision', 'GAAF Vision') ?></li>
                                 <li><?= anchor('home/gaaf_2017', 'GAAF 2017') ?></li>
-                                <li><a href="">GAAF 2018</a></li>
+                                <li><?= anchor('home/gaaf_2018', 'GAAF 2018') ?></li>
                                 <li><?= anchor('home/Team', 'Team') ?></li>
                                 <li><?= anchor('home/Supporters', 'Supporters') ?></li>
                             </ul>
@@ -91,7 +91,7 @@
                             <button class="btn btn-default search_btn" onclick="toggle_searchbar();"><i class="fa fa-times"></i></button>
                         </div>
                     </ul>
-                    <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs">
+                    <ul class="nav navbar-nav navbar-right hidden-xs">
                         <a class="right_black_logo_anchor" href="http://museumofgoa.com/" target="_new">
 							<div class="black_logo_div">
 								<img src="<?= base_url("assets/images/MOG logo.jpg") ?>">
