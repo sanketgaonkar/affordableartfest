@@ -88,6 +88,7 @@ class Art_model extends CI_Model {
             "artist_id"=>$art_arr['artist_id'],
             "category_id"=>$art_arr['category_id'],
             "sort_order"=>$art_arr['sort_order'],
+            "Active"=>$art_arr['Active'],
         );
         
         $config['upload_path'] = 'assets/images/artist_gallery/';

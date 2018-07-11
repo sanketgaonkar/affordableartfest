@@ -6,6 +6,7 @@ class Buy_Art_model extends CI_Model {
 
         $result = $this->db->select(DB_PREFIX."artist_images.*,".DB_PREFIX."category.Name as category,".DB_PREFIX."artist.Name as artist")
                 ->from(DB_PREFIX.'artist_images')
+                ->where(DB_PREFIX.'artist_images.Active=1')
                 ->join(DB_PREFIX.'category',DB_PREFIX.'category.id='.DB_PREFIX.'artist_images.category_id')
                 ->join(DB_PREFIX.'artist',DB_PREFIX.'artist.id='.DB_PREFIX.'artist_images.artist_id')
                 ->order_by(DB_PREFIX.'artist_images.sort_order', 'ASC')
