@@ -16,18 +16,6 @@
 							<p class="sponsor_title"><?= $v['Vacancy'] ?></p>
                         </a>
                     </div>
-					 <div class="col-md-4 intern_block">
-                        <a href="<?= base_url('home/job/'.$v['id'])?>">
-							<img class="medium_image" src="<?= base_url('assets/images/intern/' . $v['image']) ?>" width="100%"/>
-							<p class="sponsor_title"><?= $v['Vacancy'] ?></p>
-                        </a>
-                    </div>
-					 <div class="col-md-4 intern_block">
-                        <a href="<?= base_url('home/job/'.$v['id'])?>">
-							<img class="medium_image" src="<?= base_url('assets/images/intern/' . $v['image']) ?>" width="100%"/>
-							<p class="sponsor_title"><?= $v['Vacancy'] ?></p>
-                        </a>
-                    </div>
                 <?php } ?>
             </div>
         </div>
