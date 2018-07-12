@@ -57,9 +57,7 @@ class Home extends CI_Controller {
     }
     public function gaaf_2017(){
         $data['page_title'] = 'GAAF 2017';
-        $this->load->model('GAAF_Gallery_model');
-        $data['gaaf'] = $this->GAAF_Gallery_model->get_arts();
-        $this->load->view('gaaf_2017',$data);
+        $this->load->view('gaaf_2017');
     }
     public function gaaf_2018(){
         $data['page_title'] = 'GAAF 2018';
