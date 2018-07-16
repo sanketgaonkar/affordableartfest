@@ -57,19 +57,26 @@
             <div class="col-md-4 col-sm-12 col-xs-12">
                 <div class="feed_container col-sm-12 col-xs-12">
                     <p class="hdng"><i class="fa fa-instagram"></i> Feeds</p>
-                    <div class="feeds_item custom_scrollbar col-sm-12 col-xs-12">
-                        <img src="<?= base_url('assets/images/instagram.jpg') ?>" width="100%"/>
-                    </div>
+                    <div class="feeds_item custom_scrollbar col-sm-12 col-xs-12" id="instafeed"></div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <?php include 'common/footer.php' ?>		
+<script type="text/javascript" src="<?=base_url('assets/js/instafeed.min.js')?>"></script>
 <script>
     $(document).ready(function (){
         $('.openurl').click(function (){
            window.open($(this).data('url'),"_self");
         });
     });
+</script>
+<script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'tagged',
+        tagName: 'awesome',
+        clientId: '69a0e282b421425c986a0e86cfe94047'
+    });
+    feed.run();
 </script>
