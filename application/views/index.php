@@ -57,7 +57,9 @@
             <div class="col-md-4 col-sm-12 col-xs-12">
                 <div class="feed_container col-sm-12 col-xs-12">
                     <p class="hdng"><i class="fa fa-instagram"></i> Feeds</p>
-                    <div class="feeds_item custom_scrollbar col-sm-12 col-xs-12" id="instafeed"></div>
+                    <div class="feeds_item custom_scrollbar col-sm-12 col-xs-12">
+                        <script src="//cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/7164bf8315bc57a496cf6c01b4f9cb75.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
@@ -71,12 +73,4 @@
            window.open($(this).data('url'),"_self");
         });
     });
-</script>
-<script type="text/javascript">
-    var feed = new Instafeed({
-        get: 'tagged',
-        tagName: 'awesome',
-        clientId: '69a0e282b421425c986a0e86cfe94047'
-    });
-    feed.run();
 </script>
