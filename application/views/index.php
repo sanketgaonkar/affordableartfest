@@ -1,6 +1,6 @@
 <?php include 'common/header.php' ?>
 <div class="container min_height_container">
-    <div class="index">
+    <div class="index col-sm-12 col-xs-12 zero_padding" style="margin-top:56px;">
         <div id="Index_Carousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -30,15 +30,15 @@
         </div>
     </div>
     <div class="col-sm-12 col-xs-12 video_container">
-        <video width="100%" controls autoplay>
+        <video width="100%" controls autoplay loop>
             <source src="<?= base_url('assets/videos/logo.mp4') ?>" type="video/mp4">
             <source src="<?= base_url('assets/videos/logo.ogg') ?>" type="video/ogg">
             Your browser does not support the video tag.
         </video>
     </div>
     <div class="feeds_container">
-        <div class="container-fluid feeds">
-            <div class="col-md-4 col-sm-12 col-xs-12">
+        <div class="col-sm-12 col-xs-12 feeds zero_padding">
+            <div class="col-md-4 col-sm-12 col-xs-12 padding_left_0">
                 <div class="feed_container col-sm-12 col-xs-12">
                     <p class="hdng"><i class="fa fa-facebook"></i> Feeds</p>
                     <div class="feeds_item custom_scrollbar col-sm-12 col-xs-12">
@@ -54,7 +54,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-12 col-xs-12">
+            <div class="col-md-4 col-sm-12 col-xs-12 padding_right_0">
                 <div class="feed_container col-sm-12 col-xs-12">
                     <p class="hdng"><i class="fa fa-instagram"></i> Feeds</p>
                     <div class="feeds_item custom_scrollbar col-sm-12 col-xs-12">

@@ -42,12 +42,33 @@
 	.application_form_container form textarea{
 		resize:none;
 	}
+	.application_form_container form .attachments_block{
+		
+		margin-top:20px;
+	}
 	.padding_left_0{
 		
 		padding-left:0;
 	}
-	#application_form_dp_upload{
-		display:none;
+	.light_color_btn{
+		
+		width:100%;
+		padding:10px;
+		border-radius:25px;
+		background:rgb(236,236,236);
+		color:rgb(153,153,153);
+		border-bottom:2px solid rgb(199,199,199);
+		cursor:pointer;
+	}
+	.dark_color_btn{
+		
+		width:100%;
+		padding:10px;
+		border-radius:25px;
+		background:rgb(57,190,225);
+		color:#fff;
+		border-bottom:2px solid rgb(61,154,187);
+		cursor:pointer;
 	}
 </style>
 <div class="col-sm-12 col-xs-12 min_height_container">
@@ -63,7 +84,7 @@
 					<div class="moon_like_div_in_form"></div>
 					<div class="col-md-12 col-sm-12 col-xs-12 zero_padding text-center form_dp_container">
 						<label for="application_form_dp_upload"><img src="<?=base_url('assets/images/pic02.jpg')?>" /></label>
-						<input type="file" id="application_form_dp_upload" />
+						<input type="file" id="application_form_dp_upload" class="hidden"/>
 					</div>
 					<div class="col-md-6 col-sm-6 col-xs-12 padding_left_0">
 						<div class="col-sm-12 col-xs-12 form-group">
@@ -115,7 +136,23 @@
 						<label>Artist statement</label>
 						<textarea class="form-control" rows="4" placeholder="(200 words)" maxlength="200"></textarea>
 					</div>
-					
+					<div class="col-md-12 col-sm-12 col-xs-12 form-group text-center attachments_block">
+						<div class="col-md-4 col-sm-4 col-xs-12 padding_left_0">
+							<label for="application_form_attach_cv" class="light_color_btn">Attach CV</label>
+							<input type="file" id="application_form_attach_cv" class="hidden" />
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-12">
+							<label for="application_form_attach_artwork" class="dark_color_btn">Attach Artwork</label>
+							<input type="file" id="application_form_attach_artwork" class="hidden" />
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-12 padding_right_0">
+							<label for="application_form_attach_other" class="light_color_btn">Other Attachments</label>
+							<input type="file" id="application_form_attach_other" class="hidden" />
+						</div>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12 form-group attachments_block">
+						<button class="btn btn-primary btn-lg col-sm-12 col-xs-12">Apply</button>
+					</div>
 				</form>
 			</div> 
 		</div>
