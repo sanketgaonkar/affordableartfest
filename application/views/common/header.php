@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="<?= base_url('assets/css/footer.css') ?>"/>
     </head>
     <body>
-        <div class="navbar-wrapper container">
+        <div class="navbar-wrapper container zero_padding">
             <nav class="navbar">
                 <div class="navbar-header">
                     <div class="searchbar_block_mobile visible-xs col-xs-7">
