@@ -78,11 +78,9 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Media<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><?= anchor('home/media', 'Media') ?></li>
-                                <li><?= anchor('home/publications', 'Publication') ?></li>
                             </ul>
                         </li>
-                        <li><?= anchor('home/vote', 'Vote') ?></li>
-						<li class="cursor_pointer hidden-xs">
+                        <li class="cursor_pointer hidden-xs">
                             <a <!--onclick="toggle_searchbar();"--><i class="fa fa-search"></i></a>
                         </li>
                         <div class="searchbar_block col-md-9 col-sm-10 col-xs-12 hidden-xs">
