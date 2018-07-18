@@ -20,6 +20,10 @@
 		-moz-box-shadow: -8px 8px 10px 0px rgba(187,187,187,1);
 		box-shadow: -8px 8px 10px 0px rgba(187,187,187,1);
 	}
+        .incr{
+            font-size: 20px;
+        }
+        
 	@media (max-width:768px)
 	{
 		.padding_top_20p
@@ -50,8 +54,8 @@
                      <img src="<?= base_url('assets/images/folder_2/Image_2.jpg') ?>" width="100%" />
                 </div>
                 <div class="col-md-5 col-xs-12 pull-right margin_tb_20 padding_top_20p">
-					Museum of Goa launched the annual Goa Affordable Art Fest (GAAF) whose purpose is to provide quality 
-					art at affordable prices with the objective to enthuse the general public to appreciate, connect and collect art.
+                    <span class="incr">Museum of Goa</span> launched the annual <span class="incr">Goa Affordable Art Fest (GAAF)</span> whose purpose is to provide <span class="incr">quality 
+                        art</span> at affordable prices with the objective to enthuse the general public to appreciate, connect and collect art.
                 </div>
                 
             </div>
