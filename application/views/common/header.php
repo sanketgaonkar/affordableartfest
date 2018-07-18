@@ -45,7 +45,7 @@
                                 <li><?= anchor('home/gaaf_2017', 'GAAF 2017') ?></li>
                                 <li><?= anchor('home/gaaf_2018', 'GAAF 2018') ?></li>
                                 <li><?= anchor('home/Team', 'Team') ?></li>
-                                <li><?= anchor('home/supporters', 'Supporters') ?></li>
+                                <!--<li><?= anchor('home/supporters', 'Supporters') ?></li>-->
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -53,7 +53,7 @@
                                 Application <i class="caret"></i>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><?= anchor('home/hot_to_apply', 'How to apply') ?></li>
+                                <li><?= anchor('home/how_to_apply', 'How to apply') ?></li>
                                 <li><?= anchor('home/Application_Guidelines', 'Application guidelines') ?></li>
                                 <li><?= anchor('home/Application_Form', 'Application Form') ?></li>
                             </ul>
