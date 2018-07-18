@@ -93,10 +93,10 @@ class Home extends CI_Controller {
         $this->load->view('catalogue',$data);
     }
     
-    public function hot_to_apply(){
+    public function how_to_apply(){
         $data['page_title'] = 'How to apply';
         $data['page_heading'] = 'How to apply';
-        $this->load->view('hot_to_apply',$data);
+        $this->load->view('how_to_apply',$data);
     }
     
     public function Application_Guidelines(){

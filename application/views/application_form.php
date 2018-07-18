@@ -87,7 +87,7 @@
                     <div class="moon_like_div_in_form"></div>
                     <div class="col-md-12 col-sm-12 col-xs-12 zero_padding text-center form_dp_container">
                         <label for="application_form_dp_upload"><img src="<?= base_url('assets/images/pic02.jpg') ?>" /></label>
-                        <input type="file" id="application_form_dp_upload" class="hidden"/>
+                        <!--<input type="file" id="application_form_dp_upload" class="hidden"/>-->
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-12 padding_left_0">
                         <div class="col-sm-12 col-xs-12 form-group">

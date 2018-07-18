@@ -128,7 +128,7 @@
 						</div>
 						<div class="text-center content">
 							<div class="col-sm-12 col-xs-12 zero_padding">Click Here</div>
-							<button class="btn btn-default btn-md cyan_color_btn">Application Guidelines</button>
+							<?=anchor('home/Application_Guidelines','<button class="btn btn-default btn-md cyan_color_btn">Application Guidelines</button>')?>
 						</div>
 					</div>
 					<div class="col-sm-12 col-xs-12 black_color_step">
@@ -149,7 +149,7 @@
 						</div>
 						<div class="text-center content">
 							<div class="col-sm-12 col-xs-12 zero_padding">Click Here</div>
-							<button class="btn btn-default btn-md cyan_color_btn">Application Form</button>
+							<?=anchor('home/Application_Form','<button class="btn btn-default btn-md cyan_color_btn">Application Form</button>')?>
 						</div>
 					</div>
 					<div class="col-sm-12 col-xs-12 black_color_step">
