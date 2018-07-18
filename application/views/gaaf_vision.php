@@ -55,7 +55,7 @@
                 </div>
                 <div class="col-md-5 col-xs-12 pull-right margin_tb_20 padding_top_20p">
                     <span class="incr">Museum of Goa</span> launched the annual <span class="incr">Goa Affordable Art Fest (GAAF)</span> whose purpose is to provide <span class="incr">quality 
-                        art</span> at affordable prices with the objective to enthuse the general public to appreciate, connect and collect art.
+                        art</span> at <span class="incr">affordable prices</span> with the objective to enthuse the general public to appreciate, connect and collect art.
                 </div>
                 
             </div>
