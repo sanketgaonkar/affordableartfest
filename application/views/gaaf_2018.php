@@ -38,7 +38,7 @@
                 <img class="gaaf_2018_image" src="<?= base_url('assets/images/folder_2/Image_5.jpg') ?>" />
 			</div>
             <div class="col-md-12 col-xs-12 margin_tb_20 text-center">
-				<button class="btn btn-primary btn-lg cyan_color_btn">Apply now</button>
+		<?=anchor('home/how_to_apply','<button class="btn btn-primary btn-lg cyan_color_btn">Apply now</button>')?>
             </div>
         </div>
     </div>
