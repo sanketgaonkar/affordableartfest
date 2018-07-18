@@ -572,4 +572,23 @@ class Mog_admin extends CI_Controller {
         redirect('Mog_admin/home_banner');
     }
     
+    public function applications(){
+        $data['page_title'] = 'Applications';
+        $data['page_heading'] = 'Applications';
+        $data['breadcrums'][] = '<li>'.anchor('Mog_admin/Applications','Applications','class="active"').'</li>';
+        $this->load->model('admin/Application_model');
+        $data['applications'] = $this->Application_model->get_applications();
+        $this->load->view('admin/applications',$data);
+    }
+    
+    public function view_application($a_id){
+        $data['page_title'] = 'View Applications';
+        $data['page_heading'] = 'View Applications';
+        $data['breadcrums'][] = '<li>'.anchor('Mog_admin/Applications','Applications','class="active"').'</li>';
+        $data['breadcrums'][] = '<li>'.anchor('Mog_admin/view_application/'.$a_id,'View Applications').'</li>';
+        $this->load->model('admin/Application_model');
+        $data['application'] = $this->Application_model->get_application($a_id);
+        $this->load->view('admin/view_application',$data);
+    }
+    
 }

@@ -93,11 +93,16 @@
 	width:80px;
 }
 
-@media (max-width:475px){
+@media (max-width:425px){
 
 	.footer_links li a
 	{
 		font-size:10px;
+	}
+	.footer_outer_container
+	{
+	    margin:0 !important;
+	    padding:0 !important;
 	}
 
 }

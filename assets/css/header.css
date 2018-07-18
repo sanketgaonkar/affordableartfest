@@ -19,7 +19,18 @@
 {
 	background-color: #ccc;
 }
-
+.zero_padding
+{
+	padding:0;
+}
+.padding_right_0{
+	
+	padding-right:0;
+}
+.padding_left_0{
+	
+	padding-left:0;
+}
 .head_underline{
     margin-bottom: 20px;
     line-height: 1.8;
@@ -42,6 +53,8 @@ body {
     color: rgb(33,33,33);
     font-size: 12pt;
     background:rgb(245,245,245);
+	background-image:url('../images/mog_texture.jpg');
+	background-size:cover;
 }
 
 strong {font-weight: 500;}
@@ -74,7 +87,7 @@ ul{
 	height: 125px;
 	z-index:111;
 	position:absolute;
-	border:4px solid rgb(245,245,245);
+	/*border:4px solid rgb(245,245,245);*/
 	transition:all ease-in-out 0.3s;
 }
 .left_mog_logo_container img
@@ -94,7 +107,7 @@ ul{
 	width:125px;
 	z-index:111;
 	position:absolute;
-	border:5px solid rgb(245,245,245);
+	/*border:5px solid rgb(245,245,245);*/
 	right:0;
 }
 .black_logo_div img
@@ -104,9 +117,9 @@ ul{
 	transition:all ease-in-out 0.3s;
 }
 #navbar{
-    margin-top: 17px;
+	margin-top: 17px;
     margin-bottom:5px;
-	padding-left:180px;
+	padding-left:25%;
 }
 #navbar .bordered_menu
 {
@@ -312,7 +325,7 @@ ul{
 @media (max-width: 1024px){
 	
 	#navbar{
-		padding-left:150px;
+		padding-left:23%;
 	}
 	#navbar a{
 		margin:7px 12px;
@@ -324,7 +337,7 @@ ul{
 	
 	#navbar
 	{
-		padding-left:100px;
+		padding-left:18%;
 	}
 	#navbar a{
 		margin:7px 10px;

@@ -1,4 +1,4 @@
-	<div class="container">
+	<div class="footer_outer_container">
 	<div class=" col-sm-12 col-xs-12" id="footer">
 		<div class="container-fluid">
 			<ul class="footer_links">
