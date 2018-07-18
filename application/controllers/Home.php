@@ -63,10 +63,12 @@ class Home extends CI_Controller {
         $data['page_title'] = 'GAAF 2018';
         $this->load->view('gaaf_2018');
     }
-	public function supporters(){
+    
+    public function supporters(){
         $data['page_title'] = 'Supporters';
         $this->load->view('supporters');
     }
+    
     public function media(){
         $data['page_title'] = 'Media';
         $data['page_heading'] = 'Media';
@@ -74,6 +76,7 @@ class Home extends CI_Controller {
         $data['media'] = $this->Publication_Media_model->get_medias();
         $this->load->view('media',$data);
     }
+    
     public function publications(){
         $data['page_title'] = 'Publications';
         $data['page_heading'] = 'Publications';
@@ -104,6 +107,99 @@ class Home extends CI_Controller {
     public function Application_Form(){
         $data['page_title'] = 'Application Form';
         $data['page_heading'] = 'Application Form';
+        
+        if($_POST){
+            $this->form_validation->set_rules('firstname', 'First Name', 'trim|required');
+            $this->form_validation->set_rules('lastname', 'Last Name', 'trim|required');
+            $this->form_validation->set_rules('address', 'Address', 'trim|required');
+            $this->form_validation->set_rules('emailid', 'Email Id', 'trim|required|valid_email');
+            $this->form_validation->set_rules('phone', 'Mobile No', 'required|trim|min_length[10]|max_length[10]|numeric|regex_match[/^[789]\d{9}$/]',
+                                    array('numeric'     => 'Enter Only Numbers',
+            				'regex_match'     => 'Invalid Mobile No'));
+            $this->form_validation->set_rules('dob', 'Date of Birth', 'trim|required');
+            $this->form_validation->set_rules('age', 'age', 'trim|required|numeric');
+            $this->form_validation->set_rules('gender', 'Gender', 'trim|required');
+            $this->form_validation->set_rules('artist_statement', 'Artist Statement', 'trim|required');
+        
+            
+            //['cv']['images']['attchment']
+            if ($this->form_validation->run()){
+                $data['cv'] = "";
+                $data['images'] = array();
+                $data['others'] = array();
+                
+                $data['cv_error'] = "";
+                $data['images_error'] = array();
+                $data['others_error'] = array();
+                
+                
+                $config['upload_path'] = 'uploads/applications/';
+                $config['allowed_types'] = 'gif|jpg|png';
+                
+                //images
+                $filesCount = count($_FILES['images']['name']);
+                for($i = 0; $i < $filesCount; $i++){
+                    $_FILES['file']['name']     = $_FILES['images']['name'][$i];
+                    $_FILES['file']['type']     = $_FILES['images']['type'][$i];
+                    $_FILES['file']['tmp_name'] = $_FILES['images']['tmp_name'][$i];
+                    $_FILES['file']['error']     = $_FILES['images']['error'][$i];
+                    $_FILES['file']['size']     = $_FILES['images']['size'][$i];
+                    
+                    $this->load->library('upload', $config);
+                    $this->upload->initialize($config);
+                    if ($this->upload->do_upload('file')) {
+                        $upload_data = $this->upload->data();
+                        $data['images'][] = $upload_data['file_name'];
+                    } else {
+                        $data['images_error'][] = $_FILES['images']['name'][$i]." ".$this->upload->display_errors();
+                    }
+                }
+                
+                //cv
+                $config['allowed_types'] = 'pdf|doc|docx|xls|xlsx|csv|rtf';
+                $this->load->library('upload', $config);
+                $this->upload->initialize($config);
+                if ($this->upload->do_upload('cv')) {
+                    $upload_data = $this->upload->data();
+                    $data['cv'] = $upload_data['file_name'];
+                } else {
+                    $data['cv_error'] = $this->upload->display_errors();
+                }
+                
+                if(isset($_FILES['others']['name']) && !empty($_FILES['others']['name'])){
+                    //others
+                    $config['allowed_types'] = 'pdf|doc|docx|xls|xlsx|csv|rtf|gif|jpg|png';
+                    $filesCount = count($_FILES['others']['name']);
+                    for($i = 0; $i < $filesCount; $i++){
+                        $_FILES['other']['name']     = $_FILES['others']['name'][$i];
+                        $_FILES['other']['type']     = $_FILES['others']['type'][$i];
+                        $_FILES['other']['tmp_name'] = $_FILES['others']['tmp_name'][$i];
+                        $_FILES['other']['error']     = $_FILES['others']['error'][$i];
+                        $_FILES['other']['size']     = $_FILES['others']['size'][$i];
+
+                        $this->load->library('upload', $config);
+                        $this->upload->initialize($config);
+                        if ($this->upload->do_upload('other')) {
+                            $upload_data = $this->upload->data();
+                            $data['others'][] = $upload_data['file_name'];
+                        } else {
+                            $data['others_error'][] = $_FILES['others']['name'][$i]." ".$this->upload->display_errors();
+                        }
+                    }
+                }
+                
+                if(empty($data['cv_error']) && empty($data['images_error']) && empty($data['others_error'])){
+                    $this->load->model('Application_model');
+                    if($this->Application_model->apply($_POST, $data['cv'], $data['images'] ,$data['others'])){
+                        $data['success'] = "Sucessfully Submitted Application";
+                        $this->form_validation->unset_field_data();
+                    }else {
+                        $data['error'] = "Error Submitting Application";
+                    }
+                }
+            }
+        }
+        
         $this->load->view('application_form',$data);
     }
     
