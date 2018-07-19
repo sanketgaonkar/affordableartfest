@@ -5,18 +5,14 @@
             <div class="h2 ">
                 <div class="head_underline"><?= $page_heading ?></div>
             </div>
-            <div class="col-md-12 btm_block">
-				<p>Ever wondered how it feels like to be a part of India’s Largest Contemporary Art Space? Here's your chance to join us and get an opportunity to network with people from all walks of life and around the world... Yes we are HIRING!! Check out the vacancies available below and send us your resume soon.</p>
-            </div>
-            <div class="col-sm-12 col-xs-12 text-center btm_block intern_internal_container">
-                <?php foreach ($jobs as $k => $v) { ?>
-                    <div class="col-md-4 intern_block">
-                        <a href="<?= base_url('home/job/'.$v['id'])?>">
-							<img class="medium_image" src="<?= base_url('assets/images/intern/' . $v['image']) ?>" width="100%"/>
-							<p class="sponsor_title"><?= $v['Vacancy'] ?></p>
-                        </a>
-                    </div>
-                <?php } ?>
+            <div class="col-md-12">
+                <div class="col-sm-12 col-xs-12 intern_image_container">
+                    <img src="<?= base_url("assets/images/folder_1/3.jpg") ?>" />
+                    <div class="image_text">Join Our <span class="cyan_text">Team</span></div>
+                </div>
+                <div class="col-sm-12 col-xs-12">
+                    We currently do not have any vacancies for GAAF 2018. Please keep an eye on this page for updates.
+                </div>
             </div>
         </div>
     </div>

@@ -4,6 +4,7 @@
     <div class="col-md-12 table_top_div">
         <h4 class="card-title"><i class="fa fa-handshake-o"></i><?= $table_heading ?></h4>
     </div>
+    <div class="table-responsive">
     <table class="table table-bordered">
 		<thead>
 			<tr><td colspan="4" class="text-center hdng">Top level</td></tr>
@@ -87,5 +88,6 @@
         <?php } ?>
 		</tbody>
     </table>
+    </div>
 </section>
 <?php require 'common/footer.php'; ?>

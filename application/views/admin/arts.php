@@ -4,6 +4,7 @@
     <div class="col-md-12 table_top_div">
         <h4 class="card-title"><i class="fa fa-image"></i><?=$page_heading?></h4>
     </div>
+    <div class="table-responsive">
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -35,5 +36,6 @@
             </tr>
         <?php } ?>
     </table>
+    </div>
 </section>
 <?php require 'common/footer.php'; ?>
