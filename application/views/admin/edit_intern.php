@@ -35,19 +35,19 @@
         </div>
         <div class="form-group col-md-12">
             <label for="summernote">Description:</label>
-            <textarea id="summernote" class="form-control" name="Description" required><?=(isset($intern['Description']))?$intern['Description']:""?></textarea>
+            <textarea id="summernote" class="form-control" name="Description"><?=(isset($intern['Description']))?$intern['Description']:""?></textarea>
         </div>
         <div class="form-group col-md-12">
             <label for="Job_Role">Job Role:</label>
-            <textarea id="Job_Role" class="form-control" name="Job_Role" required><?=(isset($intern['Job_Role']))?$intern['Job_Role']:""?></textarea>
+            <textarea id="Job_Role" class="form-control" name="Job_Role"><?=(isset($intern['Job_Role']))?$intern['Job_Role']:""?></textarea>
         </div>
         <div class="form-group col-md-12">
             <label for="Requirements">Requirements:</label>
-            <textarea id="Requirements" class="form-control" name="Requirements" required><?=(isset($intern['Requirements']))?$intern['Requirements']:""?></textarea>
+            <textarea id="Requirements" class="form-control" name="Requirements"><?=(isset($intern['Requirements']))?$intern['Requirements']:""?></textarea>
         </div>
         <div class="form-group col-md-12">
             <label for="Application_Process">Application Process:</label>
-            <textarea id="Application_Process" class="form-control" name="Application_Process" required><?=(isset($intern['Application_Process']))?$intern['Application_Process']:""?></textarea>
+            <textarea id="Application_Process" class="form-control" name="Application_Process"><?=(isset($intern['Application_Process']))?$intern['Application_Process']:""?></textarea>
         </div>
     </form>
 </section>

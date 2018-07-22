@@ -33,7 +33,7 @@
         </div>
         <div class="form-group col-md-12">
             <label for="summernote">Description:</label>
-            <textarea id="summernote" class="form-control" name="Description" required><?=(isset($team['Description']))?$team['Description']:""?></textarea>
+            <textarea id="summernote" class="form-control" name="Description"><?=(isset($team['Description']))?$team['Description']:""?></textarea>
         </div>
     </form>
 </section>
