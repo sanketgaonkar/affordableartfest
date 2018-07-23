@@ -6,13 +6,17 @@
             <div class="head_underline">Select Artist</div>
         </div>
         <div class="row artist_list">
-            <?php foreach ($artists as $k => $v){ ?>
+            <?php
+            if(!empty($artists)){
+            foreach ($artists as $k => $v){ ?>
             <div class="col-md-4 text-center artist">
                 <a href="<?= base_url('home/artist_gallery/'.$v['id'])?>">
                     <div><img src="<?= base_url('assets/images/artist/'.$v['image'])?>" alt="" ></div>
                     <div class="artist_details"><?=$v['Name']?></div>
                 </a>
             </div>
+            <?php }}else{ ?>
+            <p class="text-center"> -- No Artist --</p>
             <?php } ?>
         </div>
     </div>
