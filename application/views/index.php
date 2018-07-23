@@ -50,7 +50,7 @@
                 <div class="feed_container col-sm-12 col-xs-12">
                     <p class="hdng twitter"><i class="fa fa-twitter"></i> Feeds</p>
                     <div class="feeds_item custom_scrollbar col-sm-12 col-xs-12">
-                        <img src="<?= base_url('assets/images/twitter_feeds.jpg') ?>" width="100%"/>
+                        <a class="twitter-timeline" href="https://twitter.com/GAAFofficial?ref_src=twsrc%5Etfw">Tweets by GAAFofficial</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </div>
             </div>
