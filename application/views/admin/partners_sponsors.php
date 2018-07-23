@@ -4,7 +4,7 @@
     <div class="col-md-12 table_top_div">
         <h4 class="card-title"><i class="fa fa-handshake-o"></i><?= $table_heading ?></h4>
     </div>
-    <div class="table-responsive">
+    <div class="table-responsive col-md-12">
     <table class="table table-bordered">
 		<thead>
 			<tr><td colspan="4" class="text-center hdng">Top level</td></tr>
