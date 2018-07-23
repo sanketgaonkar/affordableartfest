@@ -3,7 +3,7 @@
     <div class="table_top_div">
         <h4 class="card-title"><i class="fa fa-list"></i><?=$page_heading?></h4>
     </div>
-    <div class="table-responsive">
+    <div class="table-responsive col-md-12">
     <table class="table table-bordered">
         <thead>
             <tr>
