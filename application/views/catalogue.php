@@ -8,7 +8,9 @@
             </div>
         </div>
         <div class="col-sm-12 col-xs-12">
-            <?php $i=0; foreach ($arts as $key => $value) {
+            <?php $i=0; 
+            if(!empty($arts)){
+            foreach ($arts as $key => $value) {
             if($i%2 == 0){?>
             <div class="col-md-12 col-sm-12 col-xs-12 catalogue_block left_image_right_text margin_t_20">
                 <div class="col-md-6 col-sm-6 col-xs-12 catalogue_image">
@@ -30,14 +32,9 @@
                     <?=$value['Name']?>
                 </div>
             </div>
-            <?php } $i++;} ?>
-                <div class="col-md-4 text-center image_container hide">
-                    <a href="<?= base_url("home/artist_art/".$value['artist_id']."/".$value['id'])?>">
-                        <img src="<?= base_url('assets/images/artist_gallery/' . $value['image']) ?>" class="img">
-                        <p class="name"><?= $value['Name'] ?></p>
-                    </a>
-                </div>
-            
+            <?php } $i++;}}else{ ?>
+            <p class="text-center"> -- No Arts -- </p>
+            <?php } ?>
         </div>
     </div>
 </div>

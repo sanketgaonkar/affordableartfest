@@ -140,8 +140,8 @@ class Mog_admin extends CI_Controller {
         
         if($gaaf_id){       
             $data['gaaf_id'] = $gaaf_id;
-            $data['page_title'] = 'Edit Team';
-            $data['page_heading'] = 'Edit Team';
+            $data['page_title'] = 'Edit GAAF';
+            $data['page_heading'] = 'Edit GAAF';
             $data['team'] = $this->GAAF_Gallery_model->get_art($gaaf_id);
         }
         
