@@ -205,7 +205,7 @@ class Home extends CI_Controller {
     
     public function Intern(){
         $data['page_title'] = 'Intern';
-        $data['page_heading'] = 'Jobs';
+        $data['page_heading'] = 'Intern';
         $this->load->model('Intern_model');
         $data['jobs'] = $this->Intern_model->get_jobs();
         $this->load->view('intern',$data);
