@@ -33,7 +33,7 @@
                 </div>
             </div>
             <?php } $i++;}}else{ ?>
-            <p class="text-center"> -- NO Arts -- </p>
+            <p class="text-center"> -- No Arts -- </p>
             <?php } ?>
         </div>
     </div>
