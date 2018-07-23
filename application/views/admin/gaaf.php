@@ -9,7 +9,7 @@
         <thead>
             <tr>
                 <th style="width: 10px">#</th>
-                <th>Name</th>
+                <th>Description</th>
                 <th>Sort Order</th>
                 <th class="text-center" style="width: 130px"><i class="fa fa-cog"></i></th>
             </tr>
