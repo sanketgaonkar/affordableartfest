@@ -204,7 +204,7 @@ class Mog_admin extends CI_Controller {
             }
         }
         if($ps_id == 0)
-            $data['desc_class'] = "show";
+            $data['desc_class'] = "hide";
         if($ps_id == 1 || (isset($data['partner_sponsor']['Level']) && $data['partner_sponsor']['Level'] == 2)){
             $data['desc_class'] = "show";
             $this->load->view('admin/edit_partners_sponsors_main',$data);
