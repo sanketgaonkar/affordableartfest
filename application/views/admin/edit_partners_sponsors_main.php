@@ -14,11 +14,11 @@
         <?php } ?>
         <div class="form-group col-md-6">
             <label for="Title">Tag:</label>
-            <input type="text" name="Title" class="form-control" id="Title" value="<?=(isset($partner_sponsor['Title']))?$partner_sponsor['Title']:""?>" required/>
+            <input type="text" name="Title" class="form-control" id="Title" value="<?=(isset($partner_sponsor['Title']))?$partner_sponsor['Title']:""?>"/>
         </div>
         <div class="form-group col-md-6">
             <label for="Name">Name:</label>
-            <input type="text" name="Name" class="form-control" id="Name" value="<?=(isset($partner_sponsor['Name']))?$partner_sponsor['Name']:""?>" required/>
+            <input type="text" name="Name" class="form-control" id="Name" value="<?=(isset($partner_sponsor['Name']))?$partner_sponsor['Name']:""?>"/>
         </div>
         <div class="form-group col-md-<?=((isset($partner_sponsor['image']) && !empty($partner_sponsor['image']))?"3":"6")?>">
             <label for="image">Image:</label>
