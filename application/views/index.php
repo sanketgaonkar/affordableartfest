@@ -4,19 +4,23 @@
         <div id="Index_Carousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
-                <?php for ($i = 0; $i < count($banners); $i++) { if ($i == 0) {?>
-                    <li data-target="#Index_Carousel" data-slide-to="<?=$i?>" class="active"></li>
-                <?php } else { ?>
-                    <li data-target="#Index_Carousel" data-slide-to="<?=$i?>"></li>
-                <?php } } ?>
+                <?php for ($i = 0; $i < count($banners); $i++) {
+                    if ($i == 0) { ?>
+                        <li data-target="#Index_Carousel" data-slide-to="<?= $i ?>" class="active"></li>
+                    <?php } else { ?>
+                        <li data-target="#Index_Carousel" data-slide-to="<?= $i ?>"></li>
+    <?php }
+} ?>
             </ol>
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
-                <?php for ($i = 0; $i < count($banners); $i++) { if ($i == 0) {?>
-                <div class="item active"><img class="openurl" data-url="<?=$banners[$i]['Link']?>" src="<?= base_url('assets/images/home_banners/'.$banners[$i]['image']) ?>"></div>
-                <?php } else { ?>
-                <div class="item"><img class="openurl" data-url="<?=$banners[$i]['Link']?>" src="<?= base_url('assets/images/home_banners/'.$banners[$i]['image']) ?>"></div>
-                <?php } } ?>
+                <?php for ($i = 0; $i < count($banners); $i++) {
+                    if ($i == 0) { ?>
+                        <div class="item active"><img class="openurl" data-url="<?= $banners[$i]['Link'] ?>" src="<?= base_url('assets/images/home_banners/' . $banners[$i]['image']) ?>"></div>
+    <?php } else { ?>
+                        <div class="item"><img class="openurl" data-url="<?= $banners[$i]['Link'] ?>" src="<?= base_url('assets/images/home_banners/' . $banners[$i]['image']) ?>"></div>
+    <?php }
+} ?>
             </div>
             <!-- Left and right controls -->
             <a class="left carousel-control" href="#Index_Carousel" data-slide="prev">
@@ -42,7 +46,7 @@
                 <div class="feed_container col-sm-12 col-xs-12">
                     <p class="hdng"><i class="fa fa-facebook"></i> Feeds</p>
                     <div class="feeds_item custom_scrollbar col-sm-12 col-xs-12">
-                        <img src="<?= base_url('assets/images/facebook_feeds.png') ?>" width="100%"/>
+                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Faffordableartfest%2F&tabs=timeline&width=370&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=498619777246702" width="100%" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
                     </div>
                 </div>
             </div>
@@ -66,11 +70,11 @@
     </div>
 </div>
 <?php include 'common/footer.php' ?>		
-<script type="text/javascript" src="<?=base_url('assets/js/instafeed.min.js')?>"></script>
+<script type="text/javascript" src="<?= base_url('assets/js/instafeed.min.js') ?>"></script>
 <script>
-    $(document).ready(function (){
-        $('.openurl').click(function (){
-           window.open($(this).data('url'),"_self");
+    $(document).ready(function () {
+        $('.openurl').click(function () {
+            window.open($(this).data('url'), "_self");
         });
     });
 </script>

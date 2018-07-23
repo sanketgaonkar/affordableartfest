@@ -34,7 +34,7 @@
         <div class="form-group col-md-6 <?=(($ps_id)?"hide":"")?>">
             <label>Level:</label>
             <select name="level" class="form-control" id="level">
-                <option value="2">Level 2</option>
+                <!--<option value="2">Level 2</option>-->
                 <option value="3">Partner</option>
                 <option value="4">Sponsor</option>
             </select>
@@ -60,12 +60,12 @@
             ]
         });
         
-        $('#level').change(function(){
-            if($(this).val() == 2){
-                $('.desc').removeClass('hide');
-            }else{
-                $('.desc').addClass('hide');
-            }
-        });
+//        $('#level').change(function(){
+//            if($(this).val() == 2){
+//                $('.desc').removeClass('hide');
+//            }else{
+//                $('.desc').addClass('hide');
+//            }
+//        });
     });
 </script>
