@@ -30,13 +30,13 @@
             <div class="h2">
                 <div class="head_underline">GAAF 2018</div>
             </div>
-            <div class="col-md-12 col-xs-12">
-               Following the success of GAAF 2017, Museum of Goa is extremely ecstatic to continue our efforts. We will bring together a platform to showcase quality 
-               art at affordable prices through Goa Affordable Art Fest 2018 (GAAF 2018)
-            </div>
             <div class="col-md-12 col-xs-12 margin_tb_20 margin_bottom_30 text-center">
                 <img class="gaaf_2018_image" src="<?= base_url('assets/images/folder_2/Image_5.jpg') ?>" />
 			</div>
+			<div class="col-md-12 col-xs-12">
+               Following the success of GAAF 2017, Museum of Goa is extremely ecstatic to continue our efforts. We will bring together a platform to showcase quality 
+               art at affordable prices through Goa Affordable Art Fest 2018 (GAAF 2018)
+            </div>
             <div class="col-md-12 col-xs-12 margin_tb_20 text-center">
 		<?=anchor('home/how_to_apply','<button class="btn btn-primary btn-lg cyan_color_btn">Apply now</button>')?>
             </div>
