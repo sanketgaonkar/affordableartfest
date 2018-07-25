@@ -51,6 +51,25 @@ class Application_model extends CI_Model {
                 }
             }
             
+            $message = '<html>
+                    <body style="margin:0 60px 0 60px;outline: 0;background: #fcfcfc;padding-bottom:10px;border-bottom:solid 1px black;">
+                    <img src="'.base_url("assets/images/GAAF v1.jpg").'" style="margin-bottom:30px;">
+                    <p>Hello, '.$data['firstname'].' '.$data['lastname'].'</p>
+                    <p>We Have Recieved your application for the Art Fest.</p>
+                    <p>We Will Contact you soon.</p>
+                    <br/>
+                    <p>Thank You</p>
+                    </body>
+                    </html>';
+            
+            $this->phpmailer->From      = 'admin@affordableartfest.com';
+            $this->phpmailer->FromName  = "Affordable Art Fest";
+            $this->phpmailer->Subject   = "Art Application";
+            $this->phpmailer->Body      = $message;
+            $this->phpmailer->IsHTML(true);
+            $this->phpmailer->AddAddress($data['emailid']);
+            $this->phpmailer->Send();
+            
             return TRUE;
         }else{
             return FALSE;
