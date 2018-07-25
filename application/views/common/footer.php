@@ -27,7 +27,7 @@
 				<i class="fa fa-envelope-o"></i>&nbsp;goaaffordableartfest@gmail.com
 			</div>
 			<div class="col-sm-12 col-xs-12 block">
-				<i class="fa fa-phone"></i>&nbsp;9823768906
+				<i class="fa fa-phone"></i>&nbsp;9119401238
 			</div>
 			<div class="col-sm-12 col-xs-12 block">
 				<i class="fa fa-map-marker"></i>&nbsp;Museum of Goa, Plot no 79, Pilerne Industrial estate, Pilerne, Bardez, Goa India 403511

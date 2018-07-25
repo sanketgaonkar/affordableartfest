@@ -33,7 +33,7 @@
                 </div>
             </div>
             <?php } $i++;}}else{ ?>
-            <p class="text-center"> -- No Arts -- </p>
+            <p class="text-center"> GAAF artwork catalogue coming soon </p>
             <?php } ?>
         </div>
     </div>

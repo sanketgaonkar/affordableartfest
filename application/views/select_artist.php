@@ -16,7 +16,7 @@
                 </a>
             </div>
             <?php }}else{ ?>
-            <p class="text-center"> -- No Artist --</p>
+            <p class="text-center"> GAAF artwork catalogue coming soon </p>
             <?php } ?>
         </div>
     </div>
