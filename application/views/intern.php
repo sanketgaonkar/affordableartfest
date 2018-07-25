@@ -6,10 +6,11 @@
                 <div class="head_underline"><?= $page_heading ?></div>
             </div>
             <div class="col-md-12">
-                <div class="col-sm-12 col-xs-12 intern_image_container">
+                <!--div class="col-sm-12 col-xs-12 intern_image_container">
                     <img src="<?= base_url("assets/images/folder_1/3.jpg") ?>" />
                     <div class="image_text">Join Our <span class="cyan_text">Team</span></div>	
-                </div>
+                </div-->
+                <div class="col-sm-12 col-xs-12"><h2>Join Our <span class="cyan_color">Team</span></h2></div>
 				<div class="col-sm-12 col-xs-12">
 					We currently do not have any vacancies for GAAF 2018. Please keep an eye on this page for updates.
 				</div>
