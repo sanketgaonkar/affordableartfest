@@ -10,8 +10,8 @@ application/logs/*
 
 composer.lock
 
-application/config/config.php
-application/config/database.php
+/application/config/config.php
+/application/config/database.php
 
 user_guide_src/build/*
 user_guide_src/cilexer/build/*
@@ -32,3 +32,6 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 *.sublime-project
 /tests/tests/
 /tests/results/
+
+/assets/images/
+
