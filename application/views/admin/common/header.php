@@ -112,6 +112,7 @@
                         <li class="<?=(($method=="publications")?"active":"")?>"><?= anchor('Mog_admin/publications', '<i class="fa fa-user"></i> <span>Publication</span>') ?></li>
                         <li class="<?=(($method=="media")?"active":"")?>"><?= anchor('Mog_admin/media', '<i class="fa fa-user"></i> <span>Media</span>') ?></li>
                         <li class="<?=(($method=="Intern"|| $method=="edit_intern")?"active":"")?>"><?= anchor('Mog_admin/Intern', '<i class="fa fa-user"></i> <span>Intern</span>') ?></li>
+                        <li class="<?=(($method=="Application_guidelines" || $method=="edit_application_guidelines" || $method=="edit_terms_and_conditions" || $method=="edit_guidelines_to_apply")?"active":"")?>"><?= anchor('Mog_admin/Application_guidelines', '<i class="fa fa-user"></i> <span>Application Guidelines</span>') ?></li>
 
                     </ul>
                     <!-- /.sidebar-menu -->

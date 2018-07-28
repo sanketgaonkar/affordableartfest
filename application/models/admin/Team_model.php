@@ -34,6 +34,7 @@ class Team_model extends CI_Model {
         
         $config['upload_path'] = 'assets/images/team/';
         $config['allowed_types'] = 'jpg|jpeg|png|gif';
+        $config['max_size'] = '2000';
         $this->load->library('upload', $config);
         $this->upload->initialize($config);
         if($this->upload->do_upload('image')){
