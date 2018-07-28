@@ -634,8 +634,8 @@ class Mog_admin extends CI_Controller {
         $data['page_title'] = 'Edit Guidelines To Apply';
         $data['page_heading'] = 'Edit Guidelines To Apply';
         $data['cancel'] = anchor('Mog_admin/Application_guidelines', '<button type="button" class="btn btn-default" title="Cancel"><i class="fa fa-reply"></i></button>');
-	$data['breadcrums'][] = '<li>'.anchor('Mog_admin/Application_guidelines','Application Guidelines','class="active"').'</li>';
-	$data['breadcrums'][] = '<li>'.anchor('Mog_admin/edit_guidelines_to_apply/'.$ag_id,'Edit Guidelines To Apply','class="active"').'</li>';
+        $data['breadcrums'][] = '<li>'.anchor('Mog_admin/Application_guidelines','Application Guidelines','class="active"').'</li>';
+        $data['breadcrums'][] = '<li>'.anchor('Mog_admin/edit_guidelines_to_apply/'.$ag_id,'Edit Guidelines To Apply','class="active"').'</li>';
         $data['ag_id'] = $ag_id;
         $data['cancel'] = anchor('Mog_admin/Application_guidelines', '<button type="button" class="btn btn-default" title="Cancel"><i class="fa fa-reply"></i></button>');
         $this->load->model('admin/Application_Guidelines_model');
@@ -660,8 +660,8 @@ class Mog_admin extends CI_Controller {
         $data['page_title'] = 'Edit Terms And Conditions';
         $data['page_heading'] = 'Edit Terms And Conditions';
         $data['cancel'] = anchor('Mog_admin/Application_guidelines', '<button type="button" class="btn btn-default" title="Cancel"><i class="fa fa-reply"></i></button>');
-	$data['breadcrums'][] = '<li>'.anchor('Mog_admin/Application_guidelines','Application Guidelines','class="active"').'</li>';
-	$data['breadcrums'][] = '<li>'.anchor('Mog_admin/edit_terms_and_conditions/'.$ag_id,'Edit Terms And Conditions','class="active"').'</li>';
+        $data['breadcrums'][] = '<li>'.anchor('Mog_admin/Application_guidelines','Application Guidelines','class="active"').'</li>';
+        $data['breadcrums'][] = '<li>'.anchor('Mog_admin/edit_terms_and_conditions/'.$ag_id,'Edit Terms And Conditions','class="active"').'</li>';
         $data['ag_id'] = $ag_id;
         $data['cancel'] = anchor('Mog_admin/Application_guidelines', '<button type="button" class="btn btn-default" title="Cancel"><i class="fa fa-reply"></i></button>');
         $this->load->model('admin/Application_Guidelines_model');
