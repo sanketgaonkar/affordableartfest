@@ -592,45 +592,94 @@ class Mog_admin extends CI_Controller {
         $this->load->view('admin/view_application',$data);
     }
     
-    public function home_banner(){
-        $data['page_title'] = 'Home Banners';
-        $data['page_heading'] = 'Home Banners';
-        $data['breadcrums'][] = '<li>'.anchor('Mog_admin/Home_Banners','Home Banners','class="active"').'</li>';
-        $data['add_new'] = anchor('Mog_admin/edit_Home_Banner','<i class="fa fa-plus"></i>','class="btn btn-primary" title="Add New"');
-        $this->load->model('admin/Home_Banners_model');
-        $data['interns'] = $this->Home_Banners_model->get_banners();
-        $this->load->view('admin/home_banner',$data);
+    public function Application_guidelines(){
+        $data['page_title'] = 'Application Guidelines';
+        $data['page_heading'] = 'Application Guidelines';
+        $data['table_heading'] = 'Application Guidelines';
+        $data['breadcrums'][] = '<li>'.anchor('Mog_admin/application_guidelines','Application Guidelines','class="active"').'</li>';
+        $this->load->model('admin/Application_Guidelines_model');
+        $data['application_guidelines'] = $this->Application_Guidelines_model->get_application_guidelines();
+        $this->load->view('admin/application_guidelines',$data);
     }
 
-    public function edit_home_banner($b_id = 0){
-        $data['page_title'] = 'Add Home Banner';
-        $data['page_heading'] = 'Add Home Banner';
-        $data['cancel'] = anchor('Mog_admin/home_banner', '<button type="button" class="btn btn-default" title="Cancel"><i class="fa fa-reply"></i></button>');
-	$data['breadcrums'][] = '<li>'.anchor('Mog_admin/home_banner','Home Banners','class="active"').'</li>';
-	if($b_id)
-            $data['breadcrums'][] = '<li>'.anchor('Mog_admin/edit_home_banner/'.$b_id,'Edit Home Banner','class="active"').'</li>';
-        else
-            $data['breadcrums'][] = '<li>'.anchor('Mog_admin/edit_home_banner','Add Home Banner','class="active"').'</li>';
-        $data['b_id'] = $b_id;
-        $data['cancel'] = anchor('Mog_admin/home_banner', '<button type="button" class="btn btn-default" title="Cancel"><i class="fa fa-reply"></i></button>');
-        $this->load->model('admin/Home_Banners_model');
+    public function edit_application_guidelines($ag_id = 0){
+        $data['page_title'] = 'Edit Application Guidelines';
+        $data['page_heading'] = 'Edit Application Guidelines';
+        $data['cancel'] = anchor('Mog_admin/Application_guidelines', '<button type="button" class="btn btn-default" title="Cancel"><i class="fa fa-reply"></i></button>');
+	$data['breadcrums'][] = '<li>'.anchor('Mog_admin/Application_guidelines','Application Guidelines','class="active"').'</li>';
+	$data['breadcrums'][] = '<li>'.anchor('Mog_admin/edit_application_guidelines/'.$ag_id,'Edit Application Guidelines','class="active"').'</li>';
+        $data['ag_id'] = $ag_id;
+        $data['cancel'] = anchor('Mog_admin/Application_guidelines', '<button type="button" class="btn btn-default" title="Cancel"><i class="fa fa-reply"></i></button>');
+        $this->load->model('admin/Application_Guidelines_model');
         
         if(isset($_POST) && !empty($_POST)){
-            $result = $this->Home_Banners_model->add_edit_home_banner($_POST);
+            $result = $this->Application_Guidelines_model->edit_application_guideline($_POST);
             if($result){
-                redirect('Mog_admin/home_banner');
+                redirect('Mog_admin/Application_guidelines');
             }else{
                 $data['errors'] = 1;
             }
         }
         
-        $data['banner'] = "";
-        if($b_id){
-            $data['page_title'] = 'Edit Home Banner';
-            $data['page_heading'] = 'Edit Home Banner';
-            $data['banner'] = $this->Home_Banners_model->get_banner($b_id);
+        $data['application_guidelines'] = "";
+        if($ag_id){
+            $data['application_guidelines'] = $this->Application_Guidelines_model->get_application_guideline($ag_id);
+        }else{
+            redirect('Mog_admin/Application_guidelines');
         }
-        $this->load->view('admin/edit_home_banner',$data);
+        $this->load->view('admin/edit_application_guidelines',$data);
+    }
+    
+    public function edit_guidelines_to_apply($ag_id = 0){
+        $data['page_title'] = 'Edit Guidelines To Apply';
+        $data['page_heading'] = 'Edit Guidelines To Apply';
+        $data['cancel'] = anchor('Mog_admin/Application_guidelines', '<button type="button" class="btn btn-default" title="Cancel"><i class="fa fa-reply"></i></button>');
+	$data['breadcrums'][] = '<li>'.anchor('Mog_admin/Application_guidelines','Application Guidelines','class="active"').'</li>';
+	$data['breadcrums'][] = '<li>'.anchor('Mog_admin/edit_guidelines_to_apply/'.$ag_id,'Edit Guidelines To Apply','class="active"').'</li>';
+        $data['ag_id'] = $ag_id;
+        $data['cancel'] = anchor('Mog_admin/Application_guidelines', '<button type="button" class="btn btn-default" title="Cancel"><i class="fa fa-reply"></i></button>');
+        $this->load->model('admin/Application_Guidelines_model');
+        
+        if(isset($_POST) && !empty($_POST)){
+            $result = $this->Application_Guidelines_model->edit_guidelines_to_apply($_POST);
+            if($result){
+                redirect('Mog_admin/Application_guidelines');
+            }else{
+                $data['errors'] = 1;
+            }
+        }
+        
+        $data['guidelines_to_apply'] = "";
+        if($ag_id)
+            $data['guidelines_to_apply'] = $this->Application_Guidelines_model->get_guidelines_to_apply($ag_id);
+        
+        $this->load->view('admin/edit_guidelines_to_apply',$data);
+    }
+    
+    public function edit_terms_and_conditions($ag_id = 0){
+        $data['page_title'] = 'Edit Terms And Conditions';
+        $data['page_heading'] = 'Edit Terms And Conditions';
+        $data['cancel'] = anchor('Mog_admin/Application_guidelines', '<button type="button" class="btn btn-default" title="Cancel"><i class="fa fa-reply"></i></button>');
+	$data['breadcrums'][] = '<li>'.anchor('Mog_admin/Application_guidelines','Application Guidelines','class="active"').'</li>';
+	$data['breadcrums'][] = '<li>'.anchor('Mog_admin/edit_terms_and_conditions/'.$ag_id,'Edit Terms And Conditions','class="active"').'</li>';
+        $data['ag_id'] = $ag_id;
+        $data['cancel'] = anchor('Mog_admin/Application_guidelines', '<button type="button" class="btn btn-default" title="Cancel"><i class="fa fa-reply"></i></button>');
+        $this->load->model('admin/Application_Guidelines_model');
+        
+        if(isset($_POST) && !empty($_POST)){
+            $result = $this->Application_Guidelines_model->edit_terms_and_condition($_POST);
+            if($result){
+                redirect('Mog_admin/Application_guidelines');
+            }else{
+                $data['errors'] = 1;
+            }
+        }
+        
+        $data['terms_and_conditions'] = "";
+        if($ag_id)
+            $data['terms_and_conditions'] = $this->Application_Guidelines_model->get_terms_and_condition($ag_id);
+        
+        $this->load->view('admin/edit_terms_and_conditions',$data);
     }
     
 }

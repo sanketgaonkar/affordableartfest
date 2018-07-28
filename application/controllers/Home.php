@@ -104,6 +104,8 @@ class Home extends CI_Controller {
     public function Application_Guidelines(){
         $data['page_title'] = 'Application Guidelines';
         $data['page_heading'] = 'Application Guidelines';
+        $this->load->model('Application_Guidelines_model');
+        $data['application_guidelines'] = $this->Application_Guidelines_model->get_application_guidelines();
         $this->load->view('application_guidelines',$data);
     }
     public function Application_Form(){
