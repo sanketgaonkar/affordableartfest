@@ -75,14 +75,6 @@ class Application_model extends CI_Model {
             $this->phpmailer->AddAddress($data['emailid']);
             $this->phpmailer->Send();
             
-            $this->phpmailer->From      = 'admin@affordableartfest.com';
-            $this->phpmailer->FromName  = "Affordable Art Fest";
-            $this->phpmailer->Subject   = "Art Application";
-            $this->phpmailer->Body      = "New Application has been posted to affordableartfest.com";
-            $this->phpmailer->IsHTML(false);
-            $this->phpmailer->AddAddress("‘goaaffordableartfest@gmail.com’");
-            $this->phpmailer->Send();
-            
             return TRUE;
         }else{
             return FALSE;

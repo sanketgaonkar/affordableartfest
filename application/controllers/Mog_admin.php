@@ -5,6 +5,7 @@ class Mog_admin extends CI_Controller {
 
     public function __construct(){
         parent::__construct();
+        $this->load->library('PHPMailer');
         if(!$this->session->userdata('mog_admin_id') ){
             if($this->router->fetch_method()!=="login"){
                 return redirect ('Mog_admin/login');
