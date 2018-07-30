@@ -173,8 +173,8 @@ box-shadow: -5px 5px 15px 0px rgba(187,187,187,1);
 }
 .partners .medium_image
 {
-	width:75%;
-	height:150px
+	width:52%;
+	height:110px
 }
 .partners .btm_block .small_image
 {
@@ -505,9 +505,13 @@ box-shadow: -5px 5px 15px 0px rgba(187,187,187,1);
     height:400px;
     }
 	.partners .top_block .big_image{
-		width:50%;
-		height:220px;
+		width:55%;
+		height:250px;
 	}
+	.partners .medium_image{
+    	width:50%;
+    	height:90px
+    }
 
 }
 
