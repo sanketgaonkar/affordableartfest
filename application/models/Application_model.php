@@ -75,7 +75,7 @@ class Application_model extends CI_Model {
             $this->phpmailer->AddAddress($data['emailid']);
             $this->phpmailer->Send();
             
-            return TRUE;
+            return $insert_id;
         }else{
             return FALSE;
         }
