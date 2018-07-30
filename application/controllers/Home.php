@@ -170,7 +170,13 @@ class Home extends CI_Controller {
                     $data['cv_error'] = $this->upload->display_errors();
                 }
                 
-                if(isset($_FILES['others']['name']) && !empty($_FILES['others']['name'])){
+                
+                $othrs = 0;
+                foreach($_FILES['others']['name'] as $c){
+                    if(!empty($c))$othrs = 1;
+                }
+                
+                if(isset($_FILES['others']['name']) && !empty($_FILES['others']['name']) && $othrs){
                     //others
                     $config['allowed_types'] = 'pdf|doc|docx|xls|xlsx|csv|rtf|gif|jpg|png';
                     $filesCount = count($_FILES['others']['name']);
@@ -194,8 +200,9 @@ class Home extends CI_Controller {
                 
                 if(empty($data['cv_error']) && empty($data['images_error']) && empty($data['others_error'])){
                     $this->load->model('Application_model');
-                    if($this->Application_model->apply($_POST, $data['cv'], $data['images'] ,$data['others'])){
-                        $data['success'] = "Sucessfully Submitted Application";
+                    if($no = $this->Application_model->apply($_POST, $data['cv'], $data['images'] ,$data['others'])){
+                        $data['success'] = "Sucessfully Submitted Application <br> Application No. ".sprintf('%06d', $no);  
+                        unset($_POST);unset($_FILES);
                         $this->form_validation->unset_field_data();
                     }else {
                         $data['error'] = "Error Submitting Application";
