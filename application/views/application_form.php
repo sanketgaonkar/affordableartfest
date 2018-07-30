@@ -77,12 +77,13 @@
             <div class="h2">
                 <div class="head_underline"><?= $page_heading ?></div>
             </div>
+            <div class="col-md-12">
+                <?=((isset($success))?"<div class='alert alert-success'>".$success."</div>":"")?>
+                <?=((isset($error))?"<div class='alert alert-danger'>".$error."</div>":"")?>
+            </div>
             <div class="col-md-12 media_blocks">
                 <div class="col-md-2 col-sm-1 col-xs-0"></div>
                 <div class="col-md-8 col-sm-10 col-xs-12 catalogue_image application_form_container">
-                    <?=((isset($success))?"<div class='alert alert-success'>".$success."</div>":"")?>
-                    <?=((isset($error))?"<div class='alert alert-danger'>".$error."</div>":"")?>
-                    
                     <?= form_open('', 'class="form-horizontal col-md-12 col-sm-12 col-xs-12 zero_padding" enctype="multipart/form-data"') ?>
                     <div class="moon_like_div_in_form"></div>
                     <div class="col-md-12 col-sm-12 col-xs-12 zero_padding text-center form_dp_container">
